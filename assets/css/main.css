@@ -1299,6 +1299,10 @@ input, select, textarea {
 				font-size: 2rem;
 			}
 
+		#logo img {
+			top: -80px;
+		}
+
 		#header .content {
 			border-style: solid;
 			border-color: #ffffff;
