@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>BLU Checklist</title>
+	
+	<style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:3 }
+		table tr td				{ border: solid thin #CCC; }
+		input[type=checkbox]	{ transform: scale(1.5); }
+		tr:nth-child(even)		{ background-color: #EEE; }
+		.header td 				{ background-color: #b2b2b2}
+		.highlight td			{ background-color: #666; }
+	</style>
+	
+</head>
+
+<body>
+<table cellspacing="0" id="spells" style="margin-left:auto;margin-right:auto">
+	
+	<tr id="tr0" class="header">
+		<td>?</td>
+		<td>#</td>
+		<td>Spell</td>
+		<td>How to get</td>
+		<td>Notes</td>
+	</tr>
+	<tr id="tr1">
+		<td><input type="checkbox" id="1"/></td>
+		<td>1</td>
+		<td>Water Cannon</td>
+		<td>BLU Quest</td>
+		<td>You start with this one.</td>
+	</tr>
+	<tr id="tr2">
+		<td><input type="checkbox" id="2"/></td>
+		<td>2</td>
+		<td>Flame Thrower</td>
+		<td>Gobmachine G-VI from Brayflox's Longstop (Hard)<br>
+			Magitek Gunship from The Keeper of the Lake<br>
+			Omega from Alphascape V3.0</td>
+		<td>Have to run Alphascape 3 for #94 Mustard Bomb & #101 Peripheral Synthesis anyways.</td>
+	</tr>
+	<tr id="tr3">
+		<td><input type="checkbox" id="3"/></td>
+		<td>3</td>
+		<td>Aqua Breath</td>
+		<td> Ultros from The Dragon's Neck<br>
+			Leviathan from The Whorleater (Hard), The Whorleater (Extreme)<br>
+			Ultros from Stage 20 Masked Carnivale - Miss Typhon</td>
+		<td></td>
+	</tr>
+	<tr id="tr4">
+		<td><input type="checkbox" id="4"/></td>
+		<td>4</td>
+		<td>Flying Frenzy</td>
+		<td>Cornu - Rank A Elite Mark in Outer La Noscea<br>
+			Zu (2nd Boss) from Pharos Sirius (Kill 2 eggs to trigger the Boss to cast)<br>
+			Alpha Zu from Unhidden Leather Map</td>
+		<td>If Pharos, can snag #4 Flying Frenzy, #9 Song of Torment, #63 Sonic boom, #77 Aetheric Mimicry in 1 synced run.</td>
+	</tr>
+	<tr id="tr5">
+		<td><input type="checkbox" id="5"/></td>
+		<td>5</td>
+		<td>Drill Cannons</td>
+		<td>Magitek Vanguard H-2 - Level 50 Northern Thanalan (x16,y15)</td>
+		<td></td>
+	</tr>
+	<tr id="tr6">
+		<td><input type="checkbox" id="6"/></td>
+		<td>6</td>
+		<td>High Voltage</td>
+		<td>ADS from The Binding Coil of Bahamut - Turn 1 (1st Boss)<br>
+			The Binding Coil of Bahamut - Turn 2 (1st Boss)<br>
+			Bestial Node from Stage 15 Masked Carnivale - The Me Nobody Nodes</td>
+		<td>Can unsync t1 easily to get solo.</td>
+	</tr>
+	<tr id="tr7">
+		<td><input type="checkbox" id="7"/></td>
+		<td>7</td>
+		<td>Loom</td>
+		<td>Flame Sergeant Dalvag - Rank B Elite Mark in Northern Thanalan<br>
+			Dantalion (Trash) & Phantom Knight (Trash) in The Tam-Tara Deepcroft (Hard)<br>
+			Baalzephon from The Lost City of Amdapor</td>
+		<td>Tam Tara can unsync if need, drop chance doesnt seem bad. (but easy in a party synced anyways)</td>
+	</tr>
+	<tr id="tr8">
+		<td><input type="checkbox" id="8"/></td>
+		<td>8</td>
+		<td>Final Sting</td>
+		<td>Killer Wespe - Level 13 Middle La Noscea (x15,y15)</td>
+		<td></td>
+	</tr>
+	<tr id="tr9">
+		<td><input type="checkbox" id="9"/></td>
+		<td>9</td>
+		<td>Song of Torment</td>
+		<td>Siren (Last Boss) from Pharos Sirius<br>
+			Aglaope - Rank S Elite Mark in Il Mheg</td>
+		<td>If Pharos, can snag #4 Flying Frenzy, #9 Song of Torment, #63 Sonic boom, #77 Aetheric Mimicry in 1 synced run.</td>
+	</tr>
+	<tr id="tr10">
+		<td><input type="checkbox" id="10"/></td>
+		<td>10</td>
+		<td>Glower</td>
+		<td>Coincounter (2nd Boss) from The Aurum Vale<br>
+			Brontes - Rank S Elite Mark in Central Thanalan</td>
+		<td>100% drop rate even unsynced from Aurum Vale.</td>
+	</tr>
+	<tr id="tr11">
+		<td><input type="checkbox" id="11"/></td>
+		<td>11</td>
+		<td>Plaincracker</td>
+		<td>Clay Golem - Level 28 North Shroud (x19,y29)<br>
+			Sandstone Golem - Level 29 Southern Thanalan (x24,y13)<br>
+			Basalt Golem - Level 34 Outer La Noscea (x16,y16)</td>
+		<td></td>
+	</tr>
+	<tr id="tr12">
+		<td><input type="checkbox" id="12"/></td>
+		<td>12</td>
+		<td>Bristle</td>
+		<td>Wild Boar - Level 20 East Shroud (x18,y24)</td>
+		<td>No cast bar, it's when the boar puts a boost effect on itself</td>
+	</tr>
+	<tr id="tr13">
+		<td><input type="checkbox" id="13"/></td>
+		<td>13</td>
+		<td>White Wind</td>
+		<td>BLU Totem - Learn 10 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr14">
+		<td><input type="checkbox" id="14"/></td>
+		<td>14</td>
+		<td>Level 5 Petrify</td>
+		<td>Manor Sentry from Haukke Manor</td>
+		<td>Last boss add, Manor Sentry. (not the one before the fight) Dmg boss to get her to spawn adds, have to get him to 20% or lower to bait the spell.<br>
+			Can optionally grab #16 Ice Spikes, and #17 Blood Drain while you're there</td>
+	</tr>
+	<tr id="tr15">
+		<td><input type="checkbox" id="15"/></td>
+		<td>15</td>
+		<td>Sharpened Knife</td>
+		<td>Marberry - Rank A Elite Mark in Upper La Noscea<br>
+			Tonberry King (Last Boss) from The Wanderer's Palace</td>
+		<td>No cast bar. Probably best synced if the A rank isnt up.</td>
+	</tr>
+	<tr id="tr16">
+		<td><input type="checkbox" id="16"/></td>
+		<td>16</td>
+		<td>Ice Spikes</td>
+		<td>Trickster Imp - Level 9 Central Shroud (x27,y24)<br>
+			Vandalous Imp - Level 16 Eastern Thanalan (x15,y19)<br>
+			Manor Jester (Second Boss) from Haukke Manor<br>
+			Azulmagia from Stage 25 Masked Carnivale - Dirty Rotten Azulmagia</td>
+		<td></td>
+	</tr>
+	<tr id="tr17">
+		<td><input type="checkbox" id="17"/></td>
+		<td>17</td>
+		<td>Blood Drain</td>
+		<td>Chigoe - Level 5-7 Central Shroud (x25,y20)<br>
+			Cave Bat - Level 7 Lower La Noscea (x27,y16)<br>
+			Sun Bat - Level 10-14 Central Thanalan (x26,y18)<br>
+			Dusk Bat - Level 15 Western La Noscea (x27,y24)<br>
+			Black Bat - Level 20-21 East Shroud (x17,y23)<br>
+			Sand Bat - Level 38 Cutter's Cry</td>
+		<td>Cutter's Cry can grab #17 Blood Drain (Sand bat), #21 Self Destruct (Shrapnel), #33 The Ram's Voice/#34 The Dragon's Voice (Last boss), #36 1000 Needles (Sabotender Desertor)</td>
+	</tr>
+	<tr id="tr18">
+		<td><input type="checkbox" id="18"/></td>
+		<td>18</td>
+		<td>Acorn Bomb</td>
+		<td>Treant Sapling - Level 12-17 North Shroud (x27,y28)<br>
+			Treant Sapling - Level 12-17 Central Shroud (x27,y15)<br>
+			Treant Sapling - Level 14 East Shroud (x13,y25)</td>
+		<td>No cast bar, puts you to sleep.</td>
+	</tr>
+	<tr id="tr19">
+		<td><input type="checkbox" id="19"/></td>
+		<td>19</td>
+		<td>Bomb Toss</td>
+		<td>Goblin Fisher & Goblin Gambler - Level 5-7 Middle La Noscea (x23,y21)<br>
+			Goblin Glider & Goblin Brandisher - Level 58 The Dravanian Hinterlands (x29,y23) </td>
+		<td></td>
+	</tr>
+	<tr id="tr20">
+		<td><input type="checkbox" id="20"/></td>
+		<td>20</td>
+		<td>Off-guard</td>
+		<td>BLU Totem - Learn 5 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr21">
+		<td><input type="checkbox" id="21"/></td>
+		<td>21</td>
+		<td>Self-destruct</td>
+		<td>Glide Bomb Level 12 - Western Thanalan (x27,y16)<br>
+			Arena Cherry Bomb from Stage 8 Masked Carnivale - The Bomb-edy of Errors<br>
+			Shrapnel from Cutter's Cry</td>
+		<td>Can also snag from carnival #8 if doing anyways.<br>
+			Cutter's Cry can grab #17 Blood Drain (Sand bat), #21 Self Destruct (Shrapnel), #33 The Ram's Voice/#34 The Dragon's Voice (Last boss), #36 1000 Needles (Sabotender Desertor)</td>
+	</tr>
+	<tr id="tr22">
+		<td><input type="checkbox" id="22"/></td>
+		<td>22</td>
+		<td>Transfusion</td>
+		<td>BLU Totem - Learn 20 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr23">
+		<td><input type="checkbox" id="23"/></td>
+		<td>23</td>
+		<td>Faze</td>
+		<td>Qiqirn Shellsweeper - Level 9 Central Thanalan (x16,y19)<br>
+			Qiqirn Eggdigger - Level 13 Lower La Noscea (x18,y35)<br>
+			Qiqirn Gullroaster - Level 32 Eastern La Noscea (x26,y32) </td>
+		<td></td>
+	</tr>
+	<tr id="tr24">
+		<td><input type="checkbox" id="24"/></td>
+		<td>24</td>
+		<td>Flying Sardine</td>
+		<td>Apkallu - Level 30 Eastern La Noscea (x27,y35) </td>
+		<td></td>
+	</tr>
+	<tr id="tr25">
+		<td><input type="checkbox" id="25"/></td>
+		<td>25</td>
+		<td>Snort</td>
+		<td>Typhon from The Dragon's Neck<br>
+			Typhon from Stage 20 Masked Carnivale - Miss Typhon<br>
+			Typhon from Stage 27 Masked Carnivale - Lock up Your Snorters</td>
+		<td>Other snort spells wont count, look for flat out "Snort" cast bar.<br>
+			Can also grab #26 4-tonze Weight. If rushed, stage 27 is easy.</td>
+	</tr>
+	<tr id="tr26">
+		<td><input type="checkbox" id="26"/></td>
+		<td>26</td>
+		<td>4-tonze Weight</td>
+		<td>Ultros from The Dragon's Neck</td>
+		<td>Phase 2, when he's below 80% health.</td>
+	</tr>
+	<tr id="tr27">
+		<td><input type="checkbox" id="27"/></td>
+		<td>27</td>
+		<td>The Look</td>
+		<td>Anantaboga (Last Boss) from Amdapor Keep<br>
+			Bibliolater from The Great Gubal Library (Hard)</td>
+		<td>Can grab #60 Magic Hammer (Apanda) & #76 Condensed Libra (Mechanoscribe) as well if you go library.<br>
+			Bibliolater mob is in second trash pack</td>
+	</tr>
+	<tr id="tr28">
+		<td><input type="checkbox" id="28"/></td>
+		<td>28</td>
+		<td>Bad Breath</td>
+		<td>Stroper - Level 31 Central Shroud (x13,y21)<br>
+			Halitostroper - Level 31 Central Shroud (x15,y21)<br>
+			Stroper - Level 34 South Shroud (x20,y28)</td>
+		<td></td>
+	</tr>
+	<tr id="tr29">
+		<td><input type="checkbox" id="29"/></td>
+		<td>29</td>
+		<td>Diamondback</td>
+		<td>Horde Armored Dragon from Steps of Faith trial.<br>
+			Cuca Fera (2nd Boss) from The Stone Vigil (Hard)</td>
+		<td>Trials maybe quicker, but if you go stone virgil the 2nd boss is vulnerable to #35 Missile.</td>
+	</tr>
+	<tr id="tr30">
+		<td><input type="checkbox" id="30"/></td>
+		<td>30</td>
+		<td>Mighty Guard</td>
+		<td>BLU Totem - Learn 10 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr31">
+		<td><input type="checkbox" id="31"/></td>
+		<td>31</td>
+		<td>Sticky Tongue</td>
+		<td>Toxic Toad - Level 14 Central Thanalan (x27,y19)<br>
+			Laughing Toad - Level 22 Western Thanalan (x15,y7)<br>
+			Gigantoad - Level 33 Eastern La Noscea (x18,y26)</td>
+		<td>Can get with #32 Toad Oil, or in Aurum Vale too at the very start.</td>
+	</tr>
+	<tr id="tr32">
+		<td><input type="checkbox" id="32"/></td>
+		<td>32</td>
+		<td>Toad Oil</td>
+		<td>Giggling Gigantoad - Level 24 Western Thanalan (x15,y7) </td>
+		<td></td>
+	</tr>
+	<tr id="tr33">
+		<td><input type="checkbox" id="33"/></td>
+		<td>33</td>
+		<td>The Ram's Voice</td>
+		<td>Chimera (Last Boss) from Cutter's Cry<br>
+			Apademak from Stage 21 Masked Carnivale - Chimera on a Hot Tin Roof<br>
+			Azulmagia from Stage 25 Masked Carnivale - Dirty Rotten Azulmagia</td>
+		<td>Can do synced or not. Can get from carnival rounds #21, #25 too.<br>
+			Always cast alongside #34 The Dragon's Voice<br>
+			Cutter's Cry can grab #17 Blood Drain (Sand bat), #21 Self Destruct (Shrapnel), #33 The Ram's Voice/#34 The Dragon's Voice (Last boss), #36 1000 Needles (Sabotender Desertor)</td>
+	</tr>
+	<tr id="tr34">
+		<td><input type="checkbox" id="34"/></td>
+		<td>34</td>
+		<td>The Dragon's Voice</td>
+		<td>Chimera (Last Boss) from Cutter's Cry<br>
+			Apademak from Stage 21 Masked Carnivale - Chimera on a Hot Tin Roof<br>
+			Azulmagia from Stage 25 Masked Carnivale - Dirty Rotten Azulmagia</td>
+		<td>Always cast alongside #33: The Ram's Voice</td>
+	</tr>
+	<tr id="tr35">
+		<td><input type="checkbox" id="35"/></td>
+		<td>35</td>
+		<td>Missile</td>
+		<td>Enkidu from Battle in the Big Keep</td>
+		<td>Cleanse the minimise debuffs ASAP, reduce Enkidu to between 40% and 50% HP, and then wait until Chicken/Missile are cast.<br>
+			Enkidu will fire missile at a player, leaving fire underneath, but only during Gildamesh's chicken debuff attack.</td>
+	</tr>
+	<tr id="tr36">
+		<td><input type="checkbox" id="36"/></td>
+		<td>36</td>
+		<td>1000 Needles</td>
+		<td>Sabotender Bailaor in Flower Power - Level 24 Levequest in Southern Thanalan (x18,y13)<br>
+			Sabotender Bailaor - Level 26 Southern Thanalan (x16,y15)<br>
+			Sabotender Desertor from Cutter's Cry</td>
+		<td></td>
+	</tr>
+	<tr id="tr37">
+		<td><input type="checkbox" id="37"/></td>
+		<td>37</td>
+		<td>Ink Jet</td>
+		<td>Kraken from Sastasha (Hard)</td>
+		<td>Last boss. Attack is aoe called Ink Blast. Dodge and kill Body/Kraken Arms, not tentacles.</td>
+	</tr>
+	<tr id="tr38">
+		<td><input type="checkbox" id="38"/></td>
+		<td>38</td>
+		<td>Fire Angon</td>
+		<td>Frumious Koheel Ja from The Wanderer's Palace (Hard)</td>
+		<td>First boss, no cast bar. Boss is vuln to death spells, can use to murder after cast.</td>
+	</tr>
+	<tr id="tr39">
+		<td><input type="checkbox" id="39"/></td>
+		<td>39</td>
+		<td>Moon Flute</td>
+		<td>BLU Carnival - Beat any 10 carnival stages</td>
+		<td></td>
+	</tr>
+	<tr id="tr40">
+		<td><input type="checkbox" id="40"/></td>
+		<td>40</td>
+		<td>Tail Screw</td>
+		<td>Crag Claw - Level 61 The Peaks (x25,y11) </td>
+		<td></td>
+	</tr>
+	<tr id="tr41">
+		<td><input type="checkbox" id="41"/></td>
+		<td>41</td>
+		<td>Mind Blast</td>
+		<td>Galvanth the Dominator from The Tam-Tara Deepcroft</td>
+		<td>Last boss. 100% drop chance even unsynced.<br>
+			Can also get from mindflayer add during last boss.</td>
+	</tr>
+	<tr id="tr42">
+		<td><input type="checkbox" id="42"/></td>
+		<td>42</td>
+		<td>Doom</td>
+		<td>BLU Carnival - Beat any 20 carnival stages</td>
+		<td></td>
+	</tr>
+	<tr id="tr43">
+		<td><input type="checkbox" id="43"/></td>
+		<td>43</td>
+		<td>Peculiar Light</td>
+		<td>Lentic Mudpuppy - Level 45 Mor Dhona (x13,y10)<br>
+			Loch Nanka - Level 69 The Lochs (x17,y20) </td>
+		<td></td>
+	</tr>
+	<tr id="tr44">
+		<td><input type="checkbox" id="44"/></td>
+		<td>44</td>
+		<td>Feather Rain</td>
+		<td>Garuda from The Howling Eye (Extreme)</td>
+		<td>No cast bar, its when a ton of small aoe's appear. Can unsync and spam quickly.</td>
+	</tr>
+	<tr id="tr45">
+		<td><input type="checkbox" id="45"/></td>
+		<td>45</td>
+		<td>Eruption</td>
+		<td>Ifrit from The Bowl of Embers, The Bowl of Embers (Hard), The Bowl of Embers (Extreme)</td>
+		<td></td>
+	</tr>
+	<tr id="tr46">
+		<td><input type="checkbox" id="46"/></td>
+		<td>46</td>
+		<td>Mountain Buster</td>
+		<td>Titan from The Navel (Hard), The Navel (Extreme)</td>
+		<td>No cast bar, its the tank buster.</td>
+	</tr>
+	<tr id="tr47">
+		<td><input type="checkbox" id="47"/></td>
+		<td>47</td>
+		<td>Shock Strike</td>
+		<td>The striking tree (hard)</td>
+		<td>No cast bar, its the tank buster. (and he likes using it a lot)</td>
+	</tr>
+	<tr id="tr48">
+		<td><input type="checkbox" id="48"/></td>
+		<td>48</td>
+		<td>Glass Dance</td>
+		<td>Shiva from Akh Afah Amphitheatre (Extreme)</td>
+		<td>No cast bar, its the wide arc of ice arrows when bow attack is up. low unsync chance, but annoying to sync as blu. </td>
+	</tr>
+	<tr id="tr49">
+		<td><input type="checkbox" id="49"/></td>
+		<td>49</td>
+		<td>Veil of the Whorl</td>
+		<td>Leviathan from The Whorleater (Hard), The Whorleater (Extreme)</td>
+		<td>No cast bar, its the reflect buff</td>
+	</tr>
+	<tr id="tr50">
+		<td><input type="checkbox" id="50"/></td>
+		<td>50</td>
+		<td>Alpine Draft</td>
+		<td>Griffin - Level 59 The Sea of Clouds (x36,y9)<br>
+			True Griffin - Level 68 The Peaks (x27,y25) </td>
+		<td></td>
+	</tr>
+	<tr id="tr51">
+		<td><input type="checkbox" id="51"/></td>
+		<td>51</td>
+		<td>Protean Wave</td>
+		<td>Living Liquid (Last Boss) from Alexander - The Arm of the Father<br>
+			Shikigami of the Undertow from Stage 29 Masked Carnivale Red, Fraught, and Blue</td>
+		<td>The water pillars in stage 29 as well as the boss. Will probably get from the adds first.</td>
+	</tr>
+	<tr id="tr52">
+		<td><input type="checkbox" id="52"/></td>
+		<td>52</td>
+		<td>Northerlies</td>
+		<td>Lone Yeti - Level 51 Coerthas Western Highlands (x20,y31)<br>
+			Slate Yeti - Level 56 Coerthas Western Highlands (x17,y27) </td>
+		<td></td>
+	</tr>
+	<tr id="tr53">
+		<td><input type="checkbox" id="53"/></td>
+		<td>53</td>
+		<td>Electrogenesis</td>
+		<td>Conodont - Level 50 The Sea of Clouds (x26,y33) )</td>
+		<td>Careful to not mixup with their other cast "Defibrillate"</td>
+	</tr>
+	<tr id="tr54">
+		<td><input type="checkbox" id="54"/></td>
+		<td>54</td>
+		<td>Kaltstrahl</td>
+		<td>Faust & Strum Doll from Alexander - The Fist of the Father<br>
+			Jagd Doll from Alexander - The Cuff of the Father</td>
+		<td>Mobs before faust fight, and mobs in faust fight.</td>
+	</tr>
+	<tr id="tr55">
+		<td><input type="checkbox" id="55"/></td>
+		<td>55</td>
+		<td>Abyssal Transfixion</td>
+		<td>Ash from Haukke Manor (Hard)<br>
+			Everlasting Bibliotaph from The Great Gubal Library</td>
+		<td>Second boss. Can be unsynced easily if needed.<br>
+			If library, fail the mechanic and summon 3rd set of adds.</td>
+	</tr>
+	<tr id="tr56">
+		<td><input type="checkbox" id="56"/></td>
+		<td>56</td>
+		<td>Chirp</td>
+		<td>Paissa - Level 50 The Sea of Clouds (x19,y35) </td>
+		<td></td>
+	</tr>
+	<tr id="tr57">
+		<td><input type="checkbox" id="57"/></td>
+		<td>57</td>
+		<td>Eerie Soundwave</td>
+		<td>Enkidu from Battle in the Big Keep<br>
+			Empuse - Level 59 Azys Lla (x29,y12)</td>
+		<td>Might get while trying for #35 Missile</td>
+	</tr>
+	<tr id="tr58">
+		<td><input type="checkbox" id="58"/></td>
+		<td>58</td>
+		<td>Pom Cure</td>
+		<td>Furryfoot Kupli Kipp from Thornmarch (Hard) and Thornmarch (Extreme)</td>
+		<td>Furryfoot Kupli Kipp. Hit another moogle to bait him to cast the heal on them.<br>
+			As its from the adds preboss in trial, you can sync this and learn it and then just wipe after.</td>
+	</tr>
+	<tr id="tr59">
+		<td><input type="checkbox" id="59"/></td>
+		<td>59</td>
+		<td>Gobskin</td>
+		<td>Alexandrian Hider & Alexandrian Slider from Alexander - The Breath of the Creator</td>
+		<td>Adds before the fight.</td>
+	</tr>
+	<tr id="tr60">
+		<td><input type="checkbox" id="60"/></td>
+		<td>60</td>
+		<td>Magic Hammer</td>
+		<td>Apanda from The Great Gubal Library (Hard)<br>
+			Epilogi from Stage 24 Masked Carnivale - Amazing Technicolor Pit Fiends</td>
+		<td>Apanda is an add before final boss. Careful not to stop him from casting, gets moody about recasting.<br>
+			Can also grab #76 Condensed Libra (Mechanoscribe) and #27 The Look (Bibliolater)</td>
+	</tr>
+	<tr id="tr61">
+		<td><input type="checkbox" id="61"/></td>
+		<td>61</td>
+		<td>Avail</td>
+		<td>Queen Hawk from Saint Mocianne's Arboretum</td>
+		<td>Second boss.</td>
+	</tr>
+	<tr id="tr62">
+		<td><input type="checkbox" id="62"/></td>
+		<td>62</td>
+		<td>Frog Legs</td>
+		<td>Poroggo - Level 59 The Dravanian Hinterlands (x12,y34) </td>
+		<td>Stay melee range to bait cast (will be a circular aoe on them)</td>
+	</tr>
+	<tr id="tr63">
+		<td><input type="checkbox" id="63"/></td>
+		<td>63</td>
+		<td>Sonic Boom</td>
+		<td>Anzu - Level 59 The Sea of Clouds (x25,y6)<br>
+			Zu from Pharos Sirius</td>
+		<td>Anzu, no cast bar will inflict windburn debuff</td>
+	</tr>
+	<tr id="tr64">
+		<td><input type="checkbox" id="64"/></td>
+		<td>64</td>
+		<td>Whistle</td>
+		<td>Dhalmel - Level 56 The Sea of Clouds (x16,y32)<br>
+			Jhammel - Level 68 The Peaks (x26.5,y28.5) </td>
+		<td></td>
+	</tr>
+	<tr id="tr65">
+		<td><input type="checkbox" id="65"/></td>
+		<td>65</td>
+		<td>White Knight's Tour</td>
+		<td>White Knight from The Vault</td>
+		<td>Hallway add. Spawns alongside Black knight for spell #66</td>
+	</tr>
+	<tr id="tr66">
+		<td><input type="checkbox" id="66"/></td>
+		<td>66</td>
+		<td>Black Knight's Tour</td>
+		<td>Black Knight from The Vault</td>
+		<td>Hallway add. Spawns alongside White knight for spell #65</td>
+	</tr>
+	<tr id="tr67">
+		<td><input type="checkbox" id="67"/></td>
+		<td>67</td>
+		<td>Level 5 Death</td>
+		<td>Page 64 from The Great Gubal Library</td>
+		<td>Page 64 adds in hallways. 5 chances, can unsync easily. Aggro, then break line of sight/range to bait quicker cast.</td>
+	</tr>
+	<tr id="tr68">
+		<td><input type="checkbox" id="68"/></td>
+		<td>68</td>
+		<td>Launcher</td>
+		<td>Armored Weapon from Baelsar's Wall<br>
+			Doman Armored Weapon from Doma Castle</td>
+		<td>Second boss in Baelsar's Wall.</td>
+	</tr>
+	<tr id="tr69">
+		<td><input type="checkbox" id="69"/></td>
+		<td>69</td>
+		<td>Perpetual Ray</td>
+		<td>Alexander - The Burden of the Father</td>
+		<td>Shows in A8, but isnt obtainable there. Has to be A4</td>
+	</tr>
+	<tr id="tr70">
+		<td><input type="checkbox" id="70"/></td>
+		<td>70</td>
+		<td>Cactguard</td>
+		<td>Sabotender Guardia from The Sunken Temple of Qarn (Hard)</td>
+		<td>Second boss's add. No cast bar, its the buff he casts on the boss right after spawning</td>
+	</tr>
+	<tr id="tr71">
+		<td><input type="checkbox" id="71"/></td>
+		<td>71</td>
+		<td>Revenge Blast</td>
+		<td>BLU Totem - Learn 50 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr72">
+		<td><input type="checkbox" id="72"/></td>
+		<td>72</td>
+		<td>Angel Whisper</td>
+		<td>BLU Carnival - Beat any 30 carnival stages</td>
+		<td>Can skip stage #29 as it usually causes the most annoyance.</td>
+	</tr>
+	<tr id="tr73">
+		<td><input type="checkbox" id="73"/></td>
+		<td>73</td>
+		<td>Exuviation</td>
+		<td>Abalathian Wamoura - Level 57-58 The Sea of Clouds (x10,y17)</td>
+		<td>Only 2 up at a time but quick respawn. Pull enemies near it and cast a debuff on them (like #3 Aqua Breath)</td>
+	</tr>
+	<tr id="tr74">
+		<td><input type="checkbox" id="74"/></td>
+		<td>74</td>
+		<td>Reflux</td>
+		<td>Cloud Wyvern - Level 56 The Churning Mists (x24,y29) </td>
+		<td>Only 2 up at a time but quick respawn.</td>
+	</tr>
+	<tr id="tr75">
+		<td><input type="checkbox" id="75"/></td>
+		<td>75</td>
+		<td>Devour</td>
+		<td>Decaying Gourmand from The Lost City of Amdapor<br>
+			Caduceus from The Binding Coil of Bahamut - Turn 1<br>
+			Rafflesia from The Second Coil of Bahamut - Turn 1<br>
+			Nullchu from Saint Mocianne's Arboretum (Hard)</td>
+		<td>Lost city: Second boss, no cast bar, but its when he eats somebody. If solo, get it low and throw a DoT before eaten.<br>
+			Can get from Saint Mocianne's Arboretum (Hard) along with #87 Feculent Flood (Last boss)</td>
+	</tr>
+	<tr id="tr76">
+		<td><input type="checkbox" id="76"/></td>
+		<td>76</td>
+		<td>Condensed Libra</td>
+		<td>Mechanoscribe from The Great Gubal Library (Hard)<br>
+			Arena Scribe from Stage 24 Masked Carnivale - Amazing Technicolor Pit Fiends</td>
+		<td>Before final boss. 5 chances if you go in unsynced. If synced also grab #60 Magic Hammer, and #27 The Look.</td>
+	</tr>
+	<tr id="tr77">
+		<td><input type="checkbox" id="77"/></td>
+		<td>77</td>
+		<td>Aetherial Mimicry</td>
+		<td>Ghrah Luminary from Pharos Sirius (Hard)</td>
+		<td>First boss's adds. The corrupted orbs. When they tether, touch a spider/bird. When the tether changes the spider/bird that was the spell.</td>
+	</tr>
+	<tr id="tr78">
+		<td><input type="checkbox" id="78"/></td>
+		<td>78</td>
+		<td>Surpanakha</td>
+		<td>Ravana from Thok ast Thok (Hard) and Thok ast Thok (Extreme)</td>
+		<td>Second half of the fight</td>
+	</tr>
+	<tr id="tr79">
+		<td><input type="checkbox" id="79"/></td>
+		<td>79</td>
+		<td>Quasar</td>
+		<td>Sophia from Containment Bay P1T6</td>
+		<td>Phase 3, creates tethers and meteors.</td>
+	</tr>
+	<tr id="tr80">
+		<td><input type="checkbox" id="80"/></td>
+		<td>80</td>
+		<td>J Kick</td>
+		<td>Brute Justice (Last Phase) from Alexander - The Burden of the Son</td>
+		<td>No cast bar, its when he jumps back in the fight before the add phase (later in the fight). Careful to not burn too quick.</td>
+	</tr>
+	<tr id="tr81">
+		<td><input type="checkbox" id="81"/></td>
+		<td>81</td>
+		<td>Triple Trident</td>
+		<td>Ebisu Catfish - Level 67 Yanxia (x28,y6) </td>
+		<td>Get alongside Spell #82</td>
+	</tr>
+	<tr id="tr82">
+		<td><input type="checkbox" id="82"/></td>
+		<td>82</td>
+		<td>Tingle</td>
+		<td>Ebisu Catfish - Level 67 Yanxia (x28,y6) </td>
+		<td>Get alongside spell #81</td>
+	</tr>
+	<tr id="tr83">
+		<td><input type="checkbox" id="83"/></td>
+		<td>83</td>
+		<td>Tatami-gaeshi</td>
+		<td>Dojun-maru from Kugane Castle</td>
+		<td>Second boss</td>
+	</tr>
+	<tr id="tr84">
+		<td><input type="checkbox" id="84"/></td>
+		<td>84</td>
+		<td>Cold Fog</td>
+		<td>Mist Dragon from The Burn</td>
+		<td>Last boss. When the expanding circle and the dragon heads appear, keep one head alive to let the boss finish the cast.<br>
+			It's annoying to fight, recconended to be prepped with Diamondback etc, or bring a real healer as needed.</td>
+	</tr>
+	<tr id="tr85">
+		<td><input type="checkbox" id="85"/></td>
+		<td>85</td>
+		<td>Stotram</td>
+		<td>Lakshmi from Emanation</td>
+		<td>Early rainwide. Don't forget your duty actions.</td>
+	</tr>
+	<tr id="tr86">
+		<td><input type="checkbox" id="86"/></td>
+		<td>86</td>
+		<td>Saintly Beam</td>
+		<td>Phantom Train from Sigmascape V1.0</td>
+		<td>Its when the spotlight follows and explodes. Anybody kidnapped by a ghost as the boss dies won't learn the spell, wait for them to come back.</td>
+	</tr>
+	<tr id="tr87">
+		<td><input type="checkbox" id="87"/></td>
+		<td>87</td>
+		<td>Feculent Flood</td>
+		<td>Tokkapchi (Final Boss) from Saint Mocianne's Arboretum (Hard)</td>
+		<td>Last boss, halfway through the fight. Casts it at the mud slime. Remember to dmg the mud slime to push it away from aoe's and onto platforms.<br>
+			Can also get #75 Devour from first boss.</td>
+	</tr>
+	<tr id="tr88">
+		<td><input type="checkbox" id="88"/></td>
+		<td>88</td>
+		<td>Angel's Snack</td>
+		<td>BLU Level - BLU Lvl 70</td>
+		<td></td>
+	</tr>
+	<tr id="tr89">
+		<td><input type="checkbox" id="89"/></td>
+		<td>89</td>
+		<td>Chelonian Gate</td>
+		<td>Genbu from Hells' Lid</td>
+		<td>Last boss</td>
+	</tr>
+	<tr id="tr90">
+		<td><input type="checkbox" id="90"/></td>
+		<td>90</td>
+		<td>The Rose of Destruction</td>
+		<td>Ivon Coeurlfist from Temple of the Fist</td>
+		<td>Last boss, its the energy blast stack marker attack</td>
+	</tr>
+	<tr id="tr91">
+		<td><input type="checkbox" id="91"/></td>
+		<td>91</td>
+		<td>Basic Instinct</td>
+		<td>Master Coeurl - Level 24 Upper La Noscea (x8.9, y21.4) </td>
+		<td></td>
+	</tr>
+	<tr id="tr92">
+		<td><input type="checkbox" id="92"/></td>
+		<td>92</td>
+		<td>Ultravibration</td>
+		<td>Kongamato - Level 68 The Peaks (x11,y25) </td>
+		<td></td>
+	</tr>
+	<tr id="tr93">
+		<td><input type="checkbox" id="93"/></td>
+		<td>93</td>
+		<td>Blaze</td>
+		<td>Alte Roite from Deltascape V1.0</td>
+		<td></td>
+	</tr>
+	<tr id="tr94">
+		<td><input type="checkbox" id="94"/></td>
+		<td>94</td>
+		<td>Mustard Bomb</td>
+		<td>Omega from Alphascape V3.0</td>
+		<td>Also get #101 Peripheral Synthesis, and optionally #2 Flame Thrower if you didnt already.</td>
+	</tr>
+	<tr id="tr95">
+		<td><input type="checkbox" id="95"/></td>
+		<td>95</td>
+		<td>Dragon Force</td>
+		<td>BLU Totem - Learn 100 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr96">
+		<td><input type="checkbox" id="96"/></td>
+		<td>96</td>
+		<td>Aetherial Spark</td>
+		<td>Salt Dhruva - Level 69 The Lochs (x22,y22) </td>
+		<td></td>
+	</tr>
+	<tr id="tr97">
+		<td><input type="checkbox" id="97"/></td>
+		<td>97</td>
+		<td>Hydro Pull</td>
+		<td>Kelpie from Drowned City of Skalla</td>
+		<td>First boss</td>
+	</tr>
+	<tr id="tr98">
+		<td><input type="checkbox" id="98"/></td>
+		<td>98</td>
+		<td>Malediction of Water</td>
+		<td>Sai Taisui from The Swallow's Compass</td>
+		<td>Before final boss. He's in that water push hallway, doing the water push, gives the water push spell. #102 Both Ends (Last boss) is right after this.</td>
+	</tr>
+	<tr id="tr99">
+		<td><input type="checkbox" id="99"/></td>
+		<td>99</td>
+		<td>Choco Meteor</td>
+		<td>Courser Chocobo - Level 53 The Dravanian Forelands (x37.5, y23.7)</td>
+		<td></td>
+	</tr>
+	<tr id="tr100">
+		<td><input type="checkbox" id="100"/></td>
+		<td>100</td>
+		<td>Matra Magic</td>
+		<td>BLU Totem - Learn 100 spells</td>
+		<td></td>
+	</tr>
+	<tr id="tr101">
+		<td><input type="checkbox" id="101"/></td>
+		<td>101</td>
+		<td>Peripheral Synthesis</td>
+		<td></td>
+		<td>Also get #94 Mustard Bomb, and optionally #2 Flame Thrower if you didnt already.</td>
+	</tr>
+	<tr id="tr102">
+		<td><input type="checkbox" id="102"/></td>
+		<td>102</td>
+		<td>Both Ends</td>
+		<td>Qitian Dasheng from The Swallow's Compass</td>
+		<td>Last boss. Grab #98  Malediction of Water (Sai Taisui) right before this boss.</td>
+	</tr>
+	<tr id="tr103">
+		<td><input type="checkbox" id="103"/></td>
+		<td>103</td>
+		<td>Phantom Flurry</td>
+		<td>Suzaku from Hells' Kier</td>
+		<td></td>
+	</tr>
+	<tr id="tr104">
+		<td><input type="checkbox" id="104"/></td>
+		<td>104</td>
+		<td>Nightbloom</td>
+		<td>Tsukuyomi from Castrum Fluminis</td>
+		<td>Start of phase 2 where adds spawn.</td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(function() {
+	$('td:first-child input').change(function() {
+		$(this).closest('tr').toggleClass("highlight", this.checked)
+		updateSpell($(this).attr('id'), $(this).is(":checked"));
+	});
+});
+
+function getQueryVariable(input) {
+	let url = new URL(location.href);
+	let params = new URLSearchParams(url.search);
+	if (params.has(input)) { return params.get(input); }
+	return false;
+}
+
+function setQueryVariable(paramName, paramValue) {
+	let url = new URL(location.href);
+	let params = new URLSearchParams(url.search);
+	params.set(paramName, paramValue)
+	window.history.replaceState('', '', "?"+params);
+	return;
+}
+
+function updateSpell(spellIndex, blnChecked) {
+	// set spellIndex spellIndex to blnChecked
+	if (blnChecked) { 
+		spells = setCharAt(spells, spellIndex-1, '1');
+	} else { 
+		spells = setCharAt(spells, spellIndex-1, '0');
+	}
+	setQueryVariable("spells", bin2URL(spells));
+}
+
+function setCharAt(str, index, chr) {
+    if(index > str.length-1) return str;
+    return str.substring(0,index) + chr + str.substring(index+1);
+}
+
+function bin2URL(input) {
+	// binary to ascii
+	var result = "";
+	var arr = input.match(/.{1,8}/g);
+	for (var i = 0; i < arr.length; i++) {
+		result += String.fromCharCode(parseInt(arr[i], 2).toString(10));
+	}
+	// ascii to b64
+	result = btoa(result);
+	// encode to url
+	result = result.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=+$/, '');
+	return result; 
+}
+
+function URL2Bin(input) {
+	// decode from url
+	input = (input + '===').slice(0, input.length + (input.length % 4));
+	input = input.replace(/-/g, '+').replace(/_/g, '/');
+	
+	// b64 to ascii
+	try {
+		input = atob(input);
+	} catch {
+		console.error("atob error, invalid char in input: " + input)
+		setQueryVariable("spells", bin2URL(blankSpells()));
+		return blankSpells();
+	}
+	// ascii to binary
+	var result = "";
+	for (var i = 0; i < input.length; i++) {
+		var bin = input[i].charCodeAt().toString(2);
+		result += Array(8 - bin.length + 1).join("0") + bin;
+	} 
+	return result;
+}
+
+function blankSpells() {
+	var zeroString = "";
+	for (let i = 0; i < spellCount; i++) {
+		zeroString += 0;
+	}
+	return zeroString;
+}
+
+function loadSpells() {
+	// take global spells value, and alter checkboxes/highlight to match
+	spellID = 0;
+	for (let i = 0; i < spellCount; i++) {
+		if (spells.charAt(i) == 0) { continue; }
+		spellID = i+1;
+		document.getElementById(spellID).checked = 1;
+		document.getElementById("tr"+spellID).classList.toggle("highlight");
+	}
+}
+
+// global var
+var baseURL = location.protocol + '//' + location.host + location.pathname;
+var spellCount = 104;
+var spells = getQueryVariable("spells");
+if (spells) {
+	try {
+		// try to decode
+		spells = URL2Bin(spells);
+		// then apply across checkboxes
+		loadSpells();
+	} catch {
+		// invalid input, set to default
+		console.error("Invalid spells on load: " + spells);
+		setQueryVariable("spells", bin2URL(blankSpells()));
+		spells = blankSpells();
+	}
+} else {
+	// no spells supplied, set to default
+	setQueryVariable("spells", bin2URL(blankSpells()));
+	spells = blankSpells();
+}
+</script>
+
+</body>
+
+</html>
