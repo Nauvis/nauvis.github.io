@@ -10,37 +10,17 @@
 		input[type=radio]					{ transform: scale(1.4);width: auto; }
 		table#spells tr:nth-child(odd)		{ background-color: #EEE; }
 		table#spells tr:nth-child(even)		{ background-color: #DDD; }
-		.header td 							{ background-color: #b2b2b2}
+		.header td 							{ background-color: #B2B2B2}
 		.highlight td						{ background-color: #666}
 		.highlightCell						{ background-color: #666}
 		.text-center						{ text-align: center; }
-		table#spellsGrid{
-			table-layout: fixed;
-			height: 50vh;
-			width: 50vh;
-			background: #EEE;
-		}
-		.fixed td{
-			width:25%;
-			height:25%;
-		}
-		.outer-container {
-			position: absolute;
-			flex-direction: column;
-			display: table;
-			width: 100%;
-			height: 100%;
-		}
-		.inner-container {
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
-		}
-		.centered-content {
-			display: inline-block;
-			text-align: left;
-			padding: 50px;
-		}
+		table#spellsGrid					{ table-layout: fixed; height: 50vh; width: 50vh; background: #EEE; user-select: none; }
+		.grid td							{ width:25%; height:25%; }
+		.outer-container 					{ position: absolute; flex-direction: column; display: table; width: 100%; height: 100%; }
+		.inner-container 					{ display: table-cell; vertical-align: middle; text-align: center; }
+		.centered-content 					{ display: inline-block; text-align: left; padding: 50px; }
+		.highlightCell:hover  				{ background-color: #777; }
+		.grid td:not(.highlightCell):hover  { background-color: #DDD; }
 	</style>
 </head>
 
@@ -71,7 +51,7 @@
 		</label>
 		<br>
 		<div class="centered-content">
-			<table cellspacing="0" class="text-center fixed border" id="spellsGrid">
+			<table cellspacing="0" class="text-center border grid" id="spellsGrid">
 				<tr>
 					<td id="c1"></td>
 					<td id="c2"></td>
@@ -933,6 +913,7 @@
 		if (x === undefined || y === undefined) { return; }
 		if (x != 0) { return; }
 		if (y == 0) { return; }
+		document.getElementById(y).click()
 	});
 
 	$(function() {
