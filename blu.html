@@ -8,6 +8,11 @@
 		.border tr td						{ border: solid thin #CCC; }
 		input[type=checkbox]				{ transform: scale(1.4);width: auto;padding:40; }
 		input[type=radio]					{ transform: scale(1.4);width: auto; }
+		.highlightCell:hover  				{ background-color: #777; }
+		.grid td:not(.highlightCell):hover  { background-color: #DDD; }
+		.highlight:hover td					{ background-color: #777; }
+		.list tr:not(.highlight):not(.header):nth-child(odd):hover td 	{ background-color: #BBB; }		
+		.list tr:not(.highlight):not(.header):nth-child(even):hover td 	{ background-color: #AAA; }	
 		table#spells tr:nth-child(odd)		{ background-color: #EEE; }
 		table#spells tr:nth-child(even)		{ background-color: #DDD; }
 		.header td 							{ background-color: #B2B2B2}
@@ -19,8 +24,7 @@
 		.outer-container 					{ position: absolute; flex-direction: column; display: table; width: 100%; height: 100%; }
 		.inner-container 					{ display: table-cell; vertical-align: middle; text-align: center; }
 		.centered-content 					{ display: inline-block; text-align: left; padding: 50px; }
-		.highlightCell:hover  				{ background-color: #777; }
-		.grid td:not(.highlightCell):hover  { background-color: #DDD; }
+
 	</style>
 </head>
 
@@ -83,7 +87,7 @@
 
 
 <div id="divSpells">
-	<table cellspacing="0" class="border" id="spells" style="margin:auto;">
+	<table cellspacing="0" class="border list" id="spells" style="margin:auto;">
 		<tr id="tr0" class="header">
 			<td></td>
 			<td>#</td>
