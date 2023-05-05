@@ -983,8 +983,7 @@
 		let url = new URL(location.href);
 		let params = new URLSearchParams(url.search);
 		params.set(paramName, paramValue)
-		let newUrl = url.protocol+"//"+url.pathname+"?"+params;
-		window.history.replaceState('', '', newUrl);
+		window.history.replaceState('', '', "?"+params);
 		return;
 	}
 
