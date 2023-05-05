@@ -872,7 +872,7 @@
 			<td><input type="checkbox" id="101"/></td>
 			<td>101</td>
 			<td>Peripheral Synthesis</td>
-			<td></td>
+			<td>Omega from Alphascape V3.0</td>
 			<td>Also get #94 Mustard Bomb, and optionally #2 Flame Thrower if you didnt already.</td>
 		</tr>
 		<tr id="tr102">
@@ -983,7 +983,8 @@
 		let url = new URL(location.href);
 		let params = new URLSearchParams(url.search);
 		params.set(paramName, paramValue)
-		window.history.replaceState('', '', "?"+params);
+		let newUrl = url.protocol+"//"+url.pathname+"?"+params;
+		window.history.replaceState('', '', newUrl);
 		return;
 	}
 
@@ -1061,7 +1062,9 @@
 	}
 
 	// global var
-	var baseURL = location.protocol + '//' + location.host + location.pathname;
+	var baseUrl = location.protocol + '//' + location.host + location.pathname;
+	baseUrl = baseUrl.replace(/\.html$/, '');
+	window.history.replaceState('', '', baseUrl+location.search);
 	var spellCount = 104;
 	var gridMode = false;
 	var gridPage = 1;
