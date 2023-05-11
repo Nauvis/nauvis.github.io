@@ -24,13 +24,12 @@
 		.outer-container 					{ position: absolute; flex-direction: column; display: table; width: 100%; height: 100%; }
 		.inner-container 					{ display: table-cell; vertical-align: middle; text-align: center; }
 		.centered-content 					{ display: inline-block; text-align: left; padding: 50px; }
-
 	</style>
 </head>
 
 <body style="background-color: #ccc;">
 <button onclick="toggleMode()">Toggle Grid Checklist</button>
-<div id="divGrid" class="outer-container" style="display:none">
+<div id="divGrid" class="outer-container" style="display:none;">
 	<div class="inner-container">
 		<label class="radio-inline">
 			<input type="radio" name="page" value="1" id="r1" checked>1
@@ -63,13 +62,13 @@
 					<td id="c4"></td>
 				</tr>
 				<tr>
-					<td id="c5"> </td>
+					<td id="c5"></td>
 					<td id="c6"></td>
 					<td id="c7"></td>
 					<td id="c8"></td>
 				</tr>
 				<tr>
-					<td id="c9"> </td>
+					<td id="c9"></td>
 					<td id="c10"></td>
 					<td id="c11"></td>
 					<td id="c12"></td>
@@ -760,7 +759,7 @@
 			<td>85</td>
 			<td>Stotram</td>
 			<td>Lakshmi from Emanation</td>
-			<td>Early rainwide. Don't forget your duty actions.</td>
+			<td>Early raidwide. Don't forget your duty actions.</td>
 		</tr>
 		<tr id="tr86">
 			<td><input type="checkbox" id="86"/></td>
@@ -992,10 +991,13 @@
 		// set spellID spellID to spellState
 		if (spellState == 1) { 
 			spells = setCharAt(spells, spellID-1, '0');
+			checkedTotal -= 1;
 		} else { 
 			spells = setCharAt(spells, spellID-1, '1');
+			checkedTotal += 1;
 		}
 		setQueryVariable("spells", bin2URL(spells));
+		updateCounter();
 	}
 
 	function setCharAt(str, index, chr) {
@@ -1044,6 +1046,8 @@
 		for (let i = 0; i < spellCount; i++) {
 			zeroString += 0;
 		}
+		checkedTotal = 0;
+		updateCounter();
 		return zeroString;
 	}
 
@@ -1052,19 +1056,27 @@
 		$(".highlight").toggleClass("highlight", false);
 		$('input:checkbox').removeAttr('checked');
 		spellID = 0;
+		checkedTotal = 0;
 		for (let i = 0; i < spellCount; i++) {
 			if (spells.charAt(i) == 0) { continue; }
 			spellID = i+1;
+			checkedTotal += 1;
 			document.getElementById(spellID).checked = 1;
 			document.getElementById("tr"+spellID).classList.toggle("highlight");
 		}
+		updateCounter();
+	}
+	
+	function updateCounter() {
+		document.title = "BLU Checklist " + checkedTotal + "/" + spellCount + " Spells"
 	}
 
-	// global var
+	// global
 	var baseUrl = location.protocol + '//' + location.host + location.pathname;
 	baseUrl = baseUrl.replace(/\.html$/, '');
 	window.history.replaceState('', '', baseUrl+location.search);
-	var spellCount = 104;
+	const spellCount = 104;
+	var checkedTotal = 0;
 	var gridMode = false;
 	var gridPage = 1;
 	document.getElementById('r1').checked = true;
