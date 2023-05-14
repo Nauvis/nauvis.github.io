@@ -167,14 +167,8 @@
 	.addEventListener('click', (e)=>{
 		if (e.target.nodeName.toUpperCase() === 'TD') {
 			if (e.target.classList.contains('header')) { return; }
-			try {
 				toggleRelic(e.target.id);
 				e.target.classList.toggle('highlight');
-			} catch {
-				console.error("event error: " + e.target.id);
-				blankRelicByIndex(Number(e.target.id.charAt(0)));
-				location.reload(); 
-			}
 		}
 	});
 	
@@ -182,14 +176,8 @@
 	.addEventListener('click', (e)=>{
 		if (e.target.nodeName.toUpperCase() === 'TD') {
 			if (e.target.classList.contains('header')) { return; }
-			try {
 				toggleRelic(e.target.id);
 				e.target.classList.toggle('highlight');
-			} catch {
-				console.error("event error: " + e.target.id);
-				blankRelicByIndex(Number(e.target.id.charAt(0)));
-				location.reload(); 
-			}
 		}
 	});
 
@@ -214,15 +202,21 @@
 		var jobIndex = index.charAt(2);
 		var checkedState = relicArray[relicIndex][classIndex][jobIndex];
 		var tempArray = relicArray[relicIndex];
-		if (checkedState == 1) {
-			writeJobIndex(relicIndex, classIndex, jobIndex, '0');
-			checkedTotal -= 1;
-		} else {
-			writeJobIndex(relicIndex, classIndex, jobIndex, '1');
-			checkedTotal += 1;
+		try {
+			if (checkedState == 1) {
+				writeJobIndex(relicIndex, classIndex, jobIndex, '0');
+				checkedTotal -= 1;
+			} else {
+				writeJobIndex(relicIndex, classIndex, jobIndex, '1');
+				checkedTotal += 1;
+			}
+			updateCounter();
+			updateRelicQuery(relicIndex);
+		} catch {
+			console.error("error toggling: " + index);
+			blankRelicByIndex(relicIndex);
+			location.reload(); 
 		}
-		updateCounter();
-		updateRelicQuery(relicIndex);
 	}
 	
 	function writeJobIndex(relicIndex, classIndex, jobIndex, input) {
