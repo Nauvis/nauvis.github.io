@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>Relic Checklist</title>
+	<style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:3 }
+		.border tr td						{ border: solid thin #CCC; }
+		input[type=checkbox]				{ transform: scale(1.4);width: auto;padding:40; }
+		.even								{ background-color: #EEE; }
+		.odd								{ background-color: #DDD; }
+		.highlight							{ background-color: #666; }
+		.even:not(.highlight):not(.header):hover	{ background-color: #BBB; }
+		.odd:not(.highlight):not(.header):hover		{ background-color: #AAA; }
+		.highlight:hover					{ background-color: #777; }
+		input[type="checkbox"]:disabled		{ outline:1px solid red; }
+		.header td 							{ background-color: #B2B2B2}
+		.center								{ text-align: center;   vertical-align: middle; }
+	</style>
+</head>
+
+<body style="background-color: #ccc;">
+<div id="devRelic" style="margin: 25vh 0 0 25vw">
+	<table cellspacing="0" class="border center alternate grid" id="combatrelics" style="">
+		<tr id="tr0" class="header">
+			<td class="header">Relic</td>
+			<td class="header"><span><img src="images/ffxiv/pld.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/war.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/drk.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/gnb.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/whm.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/sch.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/ast.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/mnk.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/drg.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/nin.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/sam.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/brd.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/mch.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/dnc.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/blm.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/smn.png" alt="" loading="lazy"/></span></td>
+			<td class="header"><span><img src="images/ffxiv/rdm.png" alt="" loading="lazy"/></span></td>
+		</tr>
+		<tr id="tr1">
+			<td class="odd header" style="height: 64px">Zodiac (ARR)</td>
+			<td class="odd" id="000"></td>
+			<td class="odd" id="001"></td>
+			<td class="odd" id="002" disabled ></td>
+			<td class="odd" id="003" disabled ></td>
+			<td class="odd" id="010"></td>
+			<td class="odd" id="011"></td>
+			<td class="odd" id="012" disabled ></td>
+			<td class="odd" id="020"></td>
+			<td class="odd" id="021"></td>
+			<td class="odd" id="022"></td>
+			<td class="odd" id="023" disabled ></td>
+			<td class="odd" id="030"></td>
+			<td class="odd" id="031" disabled ></td>
+			<td class="odd" id="032" disabled ></td>
+			<td class="odd" id="040"></td>
+			<td class="odd" id="041"></td>
+			<td class="odd" id="042" disabled ></td>
+		</tr>
+		<tr id="tr2">
+			<td class="even header" style="height: 64px">Anima (HW)</td>
+			<td class="even" id="100"></td>
+			<td class="even" id="101"></td>
+			<td class="even" id="102"></td>
+			<td class="even" id="103" disabled ></td>
+			<td class="even" id="110"></td>
+			<td class="even" id="111"></td>
+			<td class="even" id="112"></td>
+			<td class="even" id="120"></td>
+			<td class="even" id="121"></td>
+			<td class="even" id="122"></td>
+			<td class="even" id="123" disabled ></td>
+			<td class="even" id="130"></td>
+			<td class="even" id="131"></td>
+			<td class="even" id="132" disabled ></td>
+			<td class="even" id="140"></td>
+			<td class="even" id="141"></td>
+			<td class="even" id="142" disabled ></td>
+		</tr>
+		<tr id="tr2">
+			<td class="odd header" style="height: 64px">Eureka (SB)</td>
+			<td class="odd" id="200"></td>
+			<td class="odd" id="201"></td>
+			<td class="odd" id="202"></td>
+			<td class="odd" id="203" disabled ></td>
+			<td class="odd" id="210"></td>
+			<td class="odd" id="211"></td>
+			<td class="odd" id="212"></td>
+			<td class="odd" id="220"></td>
+			<td class="odd" id="221"></td>
+			<td class="odd" id="222"></td>
+			<td class="odd" id="223"></td>
+			<td class="odd" id="230"></td>
+			<td class="odd" id="231"></td>
+			<td class="odd" id="232" disabled ></td>
+			<td class="odd" id="240"></td>
+			<td class="odd" id="241"></td>
+			<td class="odd" id="242"></td>
+		</tr>
+		<tr id="tr2">
+			<td class="even header" style="height: 64px">Resistance (ShB)</td>
+			<td class="even" id="300"></td>
+			<td class="even" id="301"></td>
+			<td class="even" id="302"></td>
+			<td class="even" id="303"></td>
+			<td class="even" id="310"></td>
+			<td class="even" id="311"></td>
+			<td class="even" id="312"></td>
+			<td class="even" id="320"></td>
+			<td class="even" id="321"></td>
+			<td class="even" id="322"></td>
+			<td class="even" id="323"></td>
+			<td class="even" id="330"></td>
+			<td class="even" id="331"></td>
+			<td class="even" id="332"></td>
+			<td class="even" id="340"></td>
+			<td class="even" id="341"></td>
+			<td class="even" id="342"></td>
+		</tr>
+	</table>
+	
+	<br><br>
+	
+	<table cellspacing="0" class="border center alternate" id="disciplerelics" style="">
+		<tr id="tr10001" class="header">
+			<td class="header">Relic</td>
+			<td><span><img src="images/ffxiv/crp.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/bsm.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/arm.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/gsm.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/ltw.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/wvr.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/alc.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/cul.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/min.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/btn.png" alt="" loading="lazy"/></span></td>
+			<td><span><img src="images/ffxiv/fsh.png" alt="" loading="lazy"/></span></td>
+		</tr>
+		<tr id="tr10002">
+			<td class="odd header" style="height: 64px">Skysteel (ShB)</td>
+			<td class="odd" id="400"></td>
+			<td class="odd" id="401"></td>
+			<td class="odd" id="402"></td>
+			<td class="odd" id="403"></td>
+			<td class="odd" id="404"></td>
+			<td class="odd" id="405"></td>
+			<td class="odd" id="406"></td>
+			<td class="odd" id="407"></td>
+			<td class="odd" id="410"></td>
+			<td class="odd" id="411"></td>
+			<td class="odd" id="412"></td>
+			
+			
+			
+		</tr>
+	</table>
+</div>
+<!-- ************************************************************************** -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	document.querySelector('#combatrelics')
+	.addEventListener('click', (e)=>{
+		if (e.target.nodeName.toUpperCase() === 'TD') {
+			if (e.target.classList.contains('header')) { return; }
+			
+			console.log("click id: " + e.target.id);
+			e.target.classList.toggle('highlight');
+			toggleRelic(e.target.id);
+		}
+	});
+	
+	document.querySelector('#disciplerelics')
+	.addEventListener('click', (e)=>{
+		if (e.target.nodeName.toUpperCase() === 'TD') {
+			if (e.target.classList.contains('header')) { return; }
+		
+			console.log("click id: " + e.target.id)
+			e.target.classList.toggle('highlight');
+			toggleRelic(e.target.id);
+		}
+	});
+
+	function getQueryVariable(paramName) {
+		let url = new URL(location.href);
+		let params = new URLSearchParams(url.search);
+		if (params.has(paramName)) { return params.get(paramName); }
+		return false;
+	}
+
+	function setQueryVariable(paramName, paramValue) {
+		let url = new URL(location.href);
+		let params = new URLSearchParams(url.search);
+		params.set(paramName, paramValue)
+		window.history.replaceState('', '', "?"+params);
+		return;
+	}
+	
+	function toggleRelic(index) {
+		var relicIndex = index.charAt(0);
+		var classIndex = index.charAt(1);
+		var jobIndex = index.charAt(2);
+		var checkedState = relicArray[relicIndex][classIndex][jobIndex];
+		var tempArray = relicArray[relicIndex];
+		if (checkedState == 1) {
+			writeJobIndex(relicIndex, classIndex, jobIndex, '0');
+			checkedTotal -= 1;
+		} else {
+			writeJobIndex(relicIndex, classIndex, jobIndex, '1');
+			checkedTotal += 1;
+		}
+		updateCounter();
+		updateRelicQuery(relicIndex);
+	}
+	
+	function writeJobIndex(relicIndex, classIndex, jobIndex, input) {
+		var classTemp = relicArray[relicIndex][classIndex];
+		classTemp = setCharAt(classTemp, jobIndex, input);
+		relicArray[relicIndex][classIndex] = classTemp;
+	}
+	
+	function updateRelicQuery(relicIndex) {
+		var tempArray = relicArray[relicIndex];
+		tempArray = encodeArray(tempArray).toString();
+		tempArray = tempArray.replaceAll(",", "_");
+		setQueryVariable(relicIndex.toString(), tempArray);
+	}
+
+	function setCharAt(str, index, chr) {
+		if (index > str.length-1) return str;
+		index = Number(index);
+		var str2 = str.substring(0,parseInt(index)) + chr + str.substring(parseInt(index)+1);
+		return str2;
+	}
+	
+	function urlEncode(input) {
+		// pad right til 8 bits long
+		if (input.length < 8) {
+			for (var i = 0; i = 8-input.length; i++) {
+				input += "0";
+			}
+		}
+		// binary to ascii
+		var result = "";
+		var arr = input.match(/.{1,8}/g);
+		for (var i = 0; i < arr.length; i++) {
+			result += String.fromCharCode(parseInt(arr[i], 2).toString(10));
+		}
+		// ascii to b64
+		result = btoa(result);
+		// encode to url
+		result = result.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=+$/, '');
+		return result; 
+	}
+
+	function urlDecode(input) {
+		// if the input length is 1 or divisible by 5, add a right padding 'A'
+		if (input.length == 1 || (input.length%5) == 0) { input += "A"; }
+		// decode from url
+		input = (input + '===').slice(0, (input.length + (input.length % 4)));
+		input = input.replace(/-/g, '+').replace(/_/g, '/');
+		// b64 to ascii
+		try {
+			input = atob(input);
+		} catch {
+			console.error("atob error, invalid char in input: " + input) // todo
+			blankRelics();
+			throw new Error("");
+			return;
+		}
+		// ascii to binary
+		var result = "";
+		for (var i = 0; i < input.length; i++) {
+			var bin = input[i].charCodeAt().toString(2);
+			result += Array(8 - bin.length + 1).join("0") + bin;
+		}
+		return result;
+	}
+	
+	function splitRelics() {
+		try {
+			relicArray[0] = decodeArray(getQueryVariable("0").split("_"));
+			relicArray[1] = decodeArray(getQueryVariable("1").split("_"));
+			relicArray[2] = decodeArray(getQueryVariable("2").split("_"));
+			relicArray[3] = decodeArray(getQueryVariable("3").split("_"));
+			relicArray[4] = decodeArray(getQueryVariable("4").split("_"));
+			return true;
+		} catch {
+			console.error("split error, invalid char in input: " + relicArray)
+			return false;
+		}
+	}
+	
+	function encodeArray(input) {
+		var tempArray = [];
+		for (let i = 0; i < input.length; i++) {
+			tempArray[i] = urlEncode(input[i]);
+		}
+		return tempArray;
+	}	
+	
+	function decodeArray(input) {
+		var tempArray = [];
+		for (let i = 0; i < input.length; i++) {
+			tempArray[i] = urlDecode(input[i]);
+		}
+		return tempArray;
+	}
+
+	function blankRelics() {
+		var combatBlank = urlEncode(charLoop(tankC, '0'))+"_"+urlEncode(charLoop(healC, '0'))+"_"+urlEncode(charLoop(meleeC, '0'))+"_"+urlEncode(charLoop(physC, '0'))+"_"+urlEncode(charLoop(castC, '0'));
+		var discipleBlank = urlEncode(charLoop(crafterC, '0'))+"_"+urlEncode(charLoop(gathererC, '0'));
+		console.log("blank: " + combatBlank);
+		setQueryVariable("0", combatBlank);
+		setQueryVariable("1", combatBlank);
+		setQueryVariable("2", combatBlank);
+		setQueryVariable("3", combatBlank);
+		setQueryVariable("4", discipleBlank);
+		checkedTotal = 0;
+		updateCounter();
+		return;
+	}
+	
+	function charLoop(charCount, charInput) {
+		var charString = "";
+		for (let i = 0; i < charCount; i++) {
+			charString += charInput;
+		}
+		return charString;
+	}
+
+	function loadRelics() {
+		$(".highlight").toggleClass("highlight", false);
+		var relicID = 0;
+		checkedTotal = 0;
+		// try to read relics from query values
+		if (!splitRelics()) {
+			blankRelics();
+			checkedTotal = 0;
+			updateCounter();
+		}
+		// count relics and loop through
+		var relicCount = 0;
+		for (let i = 0; i < 20; i++) {
+			if (relicArray[i] == null) { break; }
+			relicCount += 1;
+		}
+		var tempArray = [];
+		for (let i = 0; i < relicCount; i++) {
+			for (let j = 0; j < relicArray[i].length; j++) {
+				for (let k = 0; k < relicArray[i][j].length; k++) {
+					if (relicArray[i][j][k] == 1) {
+						$("#"+i+j+k).toggleClass("highlight");
+					}
+				}
+			}
+		}
+		updateCounter();
+	}
+	
+	function updateCounter() {
+		document.title = "Relics Checklist " + checkedTotal + "/" + maxRelics;
+	}
+
+	// global
+	var baseUrl = location.protocol + '//' + location.host + location.pathname;
+	baseUrl = baseUrl.replace(/\.html$/, '');
+	window.history.replaceState('', '', baseUrl+location.search);
+	const [tankC, healC, meleeC, physC, castC, crafterC, gathererC] = [4, 3, 4, 3, 3, 8, 3];
+	const maxRelics = tankC+healC+meleeC+physC+castC+crafterC+gathererC;
+	console.log("max: " + maxRelics);
+	var checkedTotal = 0;
+	var relicArray = [];
+	loadRelics();
+</script>
+<!--
+	id map: 123
+		1 first digit is relic index, 	(0:zodiac, 1:anima, 2:eureka, 3:resistance, 4:skysteel)
+		2 second digit is class index, 	
+							combat:		(0:tank, 1:heal, 2:melee, 3:phys, 4:cast)
+							disciple:	(0:crafter, 1:gatherer)
+		3 third digit is job index
+-->
+</body>
+
+</html>
