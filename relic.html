@@ -215,7 +215,7 @@
 			updateRelicQuery(relicIndex);
 		} catch {
 			console.error("error toggling: " + index);
-			blankRelicByIndex(relicIndex);
+			blankRelicByIndex(Number(relicIndex));
 			location.reload(); 
 		}
 	}
