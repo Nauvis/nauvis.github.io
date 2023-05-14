@@ -200,9 +200,10 @@
 		var relicIndex = index.charAt(0);
 		var classIndex = index.charAt(1);
 		var jobIndex = index.charAt(2);
-		var checkedState = relicArray[relicIndex][classIndex][jobIndex];
-		var tempArray = relicArray[relicIndex];
+
 		try {
+			var checkedState = relicArray[relicIndex][classIndex][jobIndex];
+			var tempArray = relicArray[relicIndex];
 			if (checkedState == 1) {
 				writeJobIndex(relicIndex, classIndex, jobIndex, '0');
 				checkedTotal -= 1;
