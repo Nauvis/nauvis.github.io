@@ -167,10 +167,14 @@
 	.addEventListener('click', (e)=>{
 		if (e.target.nodeName.toUpperCase() === 'TD') {
 			if (e.target.classList.contains('header')) { return; }
-			
-			console.log("click id: " + e.target.id);
-			e.target.classList.toggle('highlight');
-			toggleRelic(e.target.id);
+			try {
+				toggleRelic(e.target.id);
+				e.target.classList.toggle('highlight');
+			} catch {
+				console.error("event error: " + e.target.id);
+				blankRelicByIndex(Number(e.target.id.charAt(0)));
+				location.reload(); 
+			}
 		}
 	});
 	
@@ -178,10 +182,14 @@
 	.addEventListener('click', (e)=>{
 		if (e.target.nodeName.toUpperCase() === 'TD') {
 			if (e.target.classList.contains('header')) { return; }
-		
-			console.log("click id: " + e.target.id)
-			e.target.classList.toggle('highlight');
-			toggleRelic(e.target.id);
+			try {
+				toggleRelic(e.target.id);
+				e.target.classList.toggle('highlight');
+			} catch {
+				console.error("event error: " + e.target.id);
+				blankRelicByIndex(Number(e.target.id.charAt(0)));
+				location.reload(); 
+			}
 		}
 	});
 
@@ -268,9 +276,7 @@
 			input = atob(input);
 		} catch {
 			console.error("atob error, invalid char in input: " + input) // todo
-			blankRelics();
-			throw new Error("");
-			return;
+			return "00000000";
 		}
 		// ascii to binary
 		var result = "";
@@ -312,14 +318,37 @@
 	}
 
 	function blankRelics() {
-		var combatBlank = urlEncode(charLoop(tankC, '0'))+"_"+urlEncode(charLoop(healC, '0'))+"_"+urlEncode(charLoop(meleeC, '0'))+"_"+urlEncode(charLoop(physC, '0'))+"_"+urlEncode(charLoop(castC, '0'));
-		var discipleBlank = urlEncode(charLoop(crafterC, '0'))+"_"+urlEncode(charLoop(gathererC, '0'));
-		console.log("blank: " + combatBlank);
-		setQueryVariable("0", combatBlank);
-		setQueryVariable("1", combatBlank);
-		setQueryVariable("2", combatBlank);
-		setQueryVariable("3", combatBlank);
-		setQueryVariable("4", discipleBlank);
+		relicArray[0] = combatBlank;
+		relicArray[1] = combatBlank;
+		relicArray[2] = combatBlank;
+		relicArray[3] = combatBlank;
+		relicArray[4] = discipleBlank;
+		updateRelicQuery("0")
+		updateRelicQuery("1")
+		updateRelicQuery("2")
+		updateRelicQuery("3")
+		updateRelicQuery("4")
+		checkedTotal = 0;
+		updateCounter();
+		return;
+	}
+	
+	function blankRelicByIndex(index) {
+		console.log("blankRelicByIndex")
+		console.log(index)
+		var isCombat = true;
+		switch (index) {
+			case 4:
+			isCombat = false;
+			break;
+		}
+		if (isCombat) {
+			relicArray[index] = combatBlank;
+			updateRelicQuery(index)
+		} else {
+			relicArray[index] = discipleBlank;
+			updateRelicQuery(index)
+		}
 		checkedTotal = 0;
 		updateCounter();
 		return;
@@ -372,10 +401,12 @@
 	window.history.replaceState('', '', baseUrl+location.search);
 	const [tankC, healC, meleeC, physC, castC, crafterC, gathererC] = [4, 3, 4, 3, 3, 8, 3];
 	const maxRelics = tankC+healC+meleeC+physC+castC+crafterC+gathererC;
-	console.log("max: " + maxRelics);
+	var combatBlank = ["00000000", "00000000", "00000000", "00000000", "00000000"];
+	var discipleBlank = ["00000000", "00000000"];
 	var checkedTotal = 0;
 	var relicArray = [];
 	loadRelics();
+	console.log(relicArray);
 </script>
 <!--
 	id map: 123
