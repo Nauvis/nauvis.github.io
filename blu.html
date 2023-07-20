@@ -6,7 +6,7 @@
 	<style type="text/css">
 		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:3 }
 		.border tr td						{ border: solid thin #CCC; }
-		input[type=checkbox]				{ transform: scale(1.4);width: auto;padding:40; }
+		input[type=checkbox]				{ transform: scale(1.4);width: auto; padding:40; }
 		input[type=radio]					{ transform: scale(1.4);width: auto; }
 		.highlightCell:hover  				{ background-color: #777; }
 		.grid td:not(.highlightCell):hover  { background-color: #DDD; }
@@ -21,14 +21,30 @@
 		.text-center						{ text-align: center; }
 		table#spellsGrid					{ table-layout: fixed; height: 50vh; width: 50vh; background: #EEE; user-select: none; }
 		.grid td							{ width:25%; height:25%; }
-		.outer-container 					{ position: absolute; flex-direction: column; display: table; width: 100%; height: 100%; }
+		.outer-container 					{ position: absolute; flex-direction: column; display: table; width: 100%; height: 100%; top: 0; left: 0;}
 		.inner-container 					{ display: table-cell; vertical-align: middle; text-align: center; }
 		.centered-content 					{ display: inline-block; text-align: left; padding: 50px; }
+		.sidebar							{ position: fixed; top: 0; left: 0; height: 100%; margin: 10px; z-index:999;}
+		.buttonPadding						{ margin-bottom: 5px;}
 	</style>
 </head>
 
 <body style="background-color: #ccc;">
-<button onclick="toggleMode()">Toggle Grid Checklist</button>
+<div id="divSideBar" class="sidebar">
+	<div class="buttonPadding">
+		<button onclick="toggleMode()">Toggle Grid Checklist</button>
+	</div>
+	
+	<div id="divSidebarBottom" style="position: absolute; bottom: 0; left: 0; margin-bottom: 20px">
+		<div class="buttonPadding">
+			<button onclick="clearAll()">Clear All</button>
+		</div>
+		<div class="buttonPadding">
+			<button onclick="selectAll()">Select All</button>
+		</div>
+	</div>
+</div>
+
 <div id="divGrid" class="outer-container" style="display:none;">
 	<div class="inner-container">
 		<label class="radio-inline">
@@ -88,7 +104,7 @@
 </div>
 
 
-<div id="divSpells">
+<div id="divSpells" style="float:left; clear: left; margin-left: 150px;">
 	<table cellspacing="0" class="border list" id="spells" style="margin:auto;">
 		<tr id="tr0" class="header">
 			<td></td>
@@ -902,7 +918,7 @@
 			<td><input type="checkbox" id="105"/></td>
 			<td>105</td>
 			<td>Goblin Punch</td>
-			<td>Hobgoblin - Kholusia (x33,y33) </td>
+			<td>Hobgoblin - Kholosia (x33,y33) </td>
 			<td></td>
 		</tr>
 		<tr id="tr106">
@@ -937,7 +953,7 @@
 			<td><input type="checkbox" id="110"/></td>
 			<td>110</td>
 			<td>Wild Rage</td>
-			<td>Spectral Berserker from The Heroes' Gauntlet</td>
+			<td>Spectral Berserker from	The Heroes' Gauntlet</td>
 			<td>Last boss, its when he does the knockback and carves out circles in the arena.</td>
 		</tr>
 		<tr id="tr111">
@@ -1097,6 +1113,28 @@
 		$("#divGrid").toggle();
 		$("#divSpells").toggle();
 	}
+	
+	function selectAll() { // for length of encodeCompatLength, set query to '_'
+		console.log("selectAll prior state: " + spells);
+		var loopSpell = "";
+		for (let i = 0; i < encodeCompatLength; i++) {
+			loopSpell += '_';
+		}
+		spells = urlDecode(loopSpell);
+		setQueryVariable("spells", loopSpell);
+		if (gridMode) { displayPage(); } else { loadSpells(); }
+	}
+	
+	function clearAll() { // for length of encodeCompatLength, set query to 'A'
+		console.log("clearAll prior state: " + spells);
+		var loopSpell = "";
+		for (let i = 0; i < encodeCompatLength; i++) {
+			loopSpell += 'A';
+		}
+		spells = urlDecode(loopSpell);
+		setQueryVariable("spells", loopSpell);
+		if (gridMode) { displayPage(); } else { loadSpells(); }
+	}
 
 	function displayPage() {
 		$(".highlightCell").toggleClass("highlightCell");
@@ -1117,7 +1155,9 @@
 	function getQueryVariable(input) {
 		let url = new URL(location.href);
 		let params = new URLSearchParams(url.search);
-		if (params.has(input)) { return params.get(input); }
+		if (params.has(input)) {
+			return params.get(input);
+		}
 		return false;
 	}
 
@@ -1132,8 +1172,8 @@
 
 	function toggleSpell(spellID) {
 		//console.log("spell toggle: " + spellID);
-		spellState = (spells.charAt(spellID-1));
-		// set spellID spellID to spellState
+		var spellState = (spells.charAt(spellID-1));
+		// set spellID to spellState
 		if (spellState == 1) { 
 			spells = setCharAt(spells, spellID-1, '0');
 			checkedTotal -= 1;
@@ -1174,7 +1214,7 @@
 		try {
 			input = atob(input);
 		} catch {
-			console.error("atob error, invalid char in input: " + input)
+			console.error("AtoB error, invalid char in input: " + input)
 			setQueryVariable("spells", urlEncode(blankSpells()));
 			return blankSpells();
 		}
@@ -1217,10 +1257,18 @@
 		document.title = "BLU Checklist " + checkedTotal + "/" + maxSpells;
 	}
 	
-	function padSpells(spells) {
+	function padSpells() {
 		patchSpells = spells.padEnd(encodeCompatLength, 'A')
-		console.log("updated old link format to " + patchSpells + " of length " + patchSpells.length);
+		console.log("Updated old link format to '" + patchSpells + "' of length " + patchSpells.length);
+		setQueryVariable("spells", patchSpells);
 		return patchSpells;
+	}
+	
+	function trimSpells() {
+		var patchSpells = spells.substring(0, encodeCompatLength)
+		setQueryVariable("spells", patchSpells);
+		console.log("Trimmed spell query to '" + patchSpells + "' of length " + patchSpells.length);
+		return patchSpells
 	}
 
 	// global
@@ -1235,8 +1283,13 @@
 	document.getElementById('r1').checked = true;
 	var spells = getQueryVariable("spells");
 	if (spells.length < encodeCompatLength) { // if spells length indicates an old patch version, pad the right with blank slots to fix.
-		console.log("old patch link detected");
-		spells = padSpells(spells);
+		console.log("Old patch link detected: '" + spells + "'");
+		spells = padSpells();
+	}
+	if (spells.length > encodeCompatLength) { // trim any spaces or artifacts on the right of the url
+		console.log("Attempting to trim excess query data: '" + spells + "'");
+		spells = trimSpells();
+		
 	}
 	if (spells) {
 		try {
