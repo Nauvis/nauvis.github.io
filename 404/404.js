@@ -1,2 +1,2 @@
 "use strict";
-particlesJS.load("effect-js", "js/404.json", (function() {}));
+particlesJS.load("effect-js", "404/404.json", (function() {}));
