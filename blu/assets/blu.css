@@ -1,0 +1,99 @@
+body,
+div,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td,
+p {
+    font-family: "Liberation Sans";
+    font-size: 3;
+}
+.border tr td {
+    border: solid thin #ccc;
+}
+input[type="checkbox"] {
+    transform: scale(1.4);
+    width: auto;
+    padding: 40;
+}
+input[type="radio"] {
+    transform: scale(1.4);
+    width: auto;
+}
+.highlightCell:hover {
+    background-color: #777;
+}
+.grid td:not(.highlightCell):hover {
+    background-color: #ddd;
+}
+.highlight:hover td {
+    background-color: #777;
+}
+.list tr:not(.highlight):not(.header):nth-child(even):hover td {
+    background-color: #bbb;
+}
+.list tr:not(.highlight):not(.header):nth-child(odd):hover td {
+    background-color: #aaa;
+}
+table#spells tr:nth-child(even) {
+    background-color: #eee;
+}
+table#spells tr:nth-child(odd) {
+    background-color: #ddd;
+}
+.header td {
+    background-color: #b2b2b2;
+}
+.highlight td {
+    background-color: #666;
+}
+.highlightCell {
+    background-color: #666;
+}
+.text-center {
+    text-align: center;
+}
+table#spellsGrid {
+    table-layout: fixed;
+    height: 50vh;
+    width: 50vh;
+    background: #eee;
+    user-select: none;
+}
+.grid td {
+    width: 25%;
+    height: 25%;
+}
+.outer-container {
+    position: absolute;
+    flex-direction: column;
+    display: table;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.inner-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.centered-content {
+    display: inline-block;
+    text-align: left;
+    padding: 50px;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: 10px;
+    z-index: 999;
+}
+.buttonPadding {
+    margin-bottom: 5px;
+}
