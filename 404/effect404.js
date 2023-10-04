@@ -18,7 +18,7 @@ function isInArray(e, a) {
 	return a.indexOf(e) > -1
 }
 var pJS = function(e, a) {
-	var t = document.querySelector("#" + e + " > .404-js-canvas-el");
+	var t = document.querySelector("#" + e + " > .effect-js-canvas-el");
 	this.pJS = {
 		canvas: {
 			el: t,
@@ -546,9 +546,9 @@ Object.deepExtend = function(e, a) {
 }, window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(e) {
 	window.setTimeout(e, 1e3 / 60)
 }, window.cancelRequestAnimFrame = window.cancelAnimationFrame || window.webkitCancelRequestAnimationFrame || window.mozCancelRequestAnimationFrame || window.oCancelRequestAnimationFrame || window.msCancelRequestAnimationFrame || clearTimeout, window.pJSDom = [], window.particlesJS = function(e, a) {
-	"string" != typeof e && (a = e, e = "404-js"), e || (e = "404-js");
+	"string" != typeof e && (a = e, e = "effect-js"), e || (e = "effect-js");
 	var t = document.getElementById(e),
-		i = "404-js-canvas-el",
+		i = "effect-js-canvas-el",
 		n = t.getElementsByClassName(i);
 	if (n.length)
 		for (; n.length > 0;) t.removeChild(n[0]);
