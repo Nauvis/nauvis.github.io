@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style> html {-ms-overflow-style: none;scrollbar-width: none;} html::-webkit-scrollbar {display: none;} </style>
+	<style> html {-ms-overflow-style: none;scrollbar-width: none;} html::-webkit-scrollbar {display: none;}</style>
 </head>
 <body class="is-preload">
 <!-- Wrapper -->
@@ -213,7 +213,8 @@
 					<article id="contact">
 						<h2 class="major">Contact</h2>
 						<ul class="icons">
-							<li><a href="https://youtu.be/dQw4w9WgXcQ" class="icon brands fa-discord" target="_blank"><span class="label">Discord</span></a> laplizard</li>
+							<li style="padding: 0px 10px 0px 0px;"><a class="icon brands fa-discord" onclick="copyDisc()" title="Copy to clipboard"><span class="label">Discord</span></a></li>nauvis.dev
+							<div style="display: none;">Copy to clipboard</div>
 							</br></br>
 							<li><a href="mailto:admin@nauvis.dev" class="icon fa-envelope" target="_blank"><span class="label">Email</span></a></li>
 							<li><a href="https://steamcommunity.com/id/nauvis/" class="icon brands fa-steam" target="_blank"><span class="label">Steam</span></a></li>
@@ -237,5 +238,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script> function copyDisc() { navigator.clipboard.writeText("nauvis.dev"); } </script>
 </body>
 </html>
