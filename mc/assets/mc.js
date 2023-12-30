@@ -48,7 +48,11 @@ function altInput(element, parentDivID) {
 
 function writeValueIfNum(coord, targetElement) {
 	coord = parseIntOrZero(coord);
-	targetElement.value = Math.floor(coord);
+	if (isNaN(coord)) {
+		targetElement.value = 0;
+	} else {
+		targetElement.value = Math.floor(coord);
+	}
 	return;
 }
 
