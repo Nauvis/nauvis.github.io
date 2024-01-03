@@ -1,65 +1,11 @@
-$('input').on('input',function(e){
-	var v = this.id;
-	var parentDivID = $(this).parent().closest('div').attr('id');
-	blnAltInput = (v == "oCoords" || v == "nCoords");
-	if (blnAltInput) {
-		altInput(this, parentDivID)
-	} else {
-		numInput(this, parentDivID)
+function getOnlineStatus(serverIP, statusQuerySel, countQuerySel, divQuerySel) {
+	MinecraftAPI.getServerStatus(serverIP, {}, function (err, status) {  
+	if (err) {  
+	return document.querySelector(divQuerySel).innerHTML = 'Error loading status';  
 	}
-});
-
-function numInput(element, parentDivID) {
-	if (parentDivID == "oCoordsDiv") {
-		writeValueIfNum(oCoordsX.value/8, nCoordsX);
-		writeValueIfNum(oCoordsY.value, nCoordsY);
-		writeValueIfNum(oCoordsZ.value/8, nCoordsZ);
-		oCoords.value = Math.floor(oCoordsX.value) + " " + Math.floor(oCoordsY.value) + " " +  Math.floor(oCoordsZ.value);
-		nCoords.value = Math.floor(nCoordsX.value) + " " + Math.floor(nCoordsY.value) + " " +  Math.floor(nCoordsZ.value);
-	} else {
-		writeValueIfNum(nCoordsX.value*8, oCoordsX);
-		writeValueIfNum(nCoordsY.value, oCoordsY);
-		writeValueIfNum(nCoordsZ.value*8, oCoordsZ);
-		oCoords.value = Math.floor(oCoordsX.value) + " " + Math.floor(oCoordsY.value) + " " +  Math.floor(oCoordsZ.value);
-		nCoords.value = Math.floor(nCoordsX.value) + " " + Math.floor(nCoordsY.value) + " " +  Math.floor(nCoordsZ.value);
-	}
+	document.querySelector(statusQuerySel).innerHTML = status.online ? 'Online' : 'Offline';
+	document.querySelector(countQuerySel).innerHTML = status.players.now + "/" + status.players.max;
+	});
 }
-
-function altInput(element, parentDivID) {
-	coordsArray = element.value.split(/[ ,]+/);
-	if (parentDivID == "oCoordsDiv") {
-		writeValueIfNum(coordsArray[0], oCoordsX);
-		writeValueIfNum(coordsArray[1], oCoordsY);
-		writeValueIfNum(coordsArray[2], oCoordsZ);
-		writeValueIfNum(oCoordsX.value/8, nCoordsX);
-		writeValueIfNum(oCoordsY.value, nCoordsY);
-		writeValueIfNum(oCoordsZ.value/8, nCoordsZ);
-		nCoords.value = Math.floor(nCoordsX.value) + " " + Math.floor(nCoordsY.value) + " " +  Math.floor(nCoordsZ.value);
-	} else {
-		writeValueIfNum(coordsArray[0], nCoordsX);
-		writeValueIfNum(coordsArray[1], nCoordsY);
-		writeValueIfNum(coordsArray[2], nCoordsZ);
-		writeValueIfNum(nCoordsX.value*8, oCoordsX);
-		writeValueIfNum(nCoordsY.value, oCoordsY);
-		writeValueIfNum(nCoordsZ.value*8, oCoordsZ);
-		oCoords.value = Math.floor(oCoordsX.value) + " " + Math.floor(oCoordsY.value) + " " +  Math.floor(oCoordsZ.value);
-	}
-}
-
-function writeValueIfNum(coord, targetElement) {
-	coord = parseIntOrZero(coord);
-	if (isNaN(coord)) {
-		targetElement.value = 0;
-	} else {
-		targetElement.value = Math.floor(coord);
-	}
-	return;
-}
-
-function parseIntOrZero(value) {
-    try {
-        return parseInt(value);
-    } catch (e) {
-        return 0;
-    }
-}
+getOnlineStatus('mc.nauvis.dev', '.serverStatus1', '.playerCount1', '.errDiv1');
+getOnlineStatus('kate.nauvis.dev', '.serverStatus2', '.playerCount2', '.errDiv2');
