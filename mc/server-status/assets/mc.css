@@ -8,13 +8,6 @@ body {
 input {
 	font-size:24pt;
 }
-label {
-	display: inline-block;
-	width: 24px;
-}
-.text-center {
-    text-align: center;
-}
 .outer-container {
     position: absolute;
     flex-direction: column;
@@ -34,6 +27,14 @@ label {
     display: inline-block;
     text-align: left;
     padding: 50px;
-	background-color: #bbb;
 	border-radius: 25px;
+}
+#server1Div {
+	background-color: #6fc276;
+}
+#server2Div {
+	background-color: #ff99b3;
+}
+.offline {
+	background-color: #ccc !important;
 }
