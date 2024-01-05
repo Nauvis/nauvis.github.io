@@ -1,23 +1,43 @@
 function getOnlineStatus(serverIP, statusQuerySel, countQuerySel, listQuerySel, divQuerySel) {
-	MinecraftAPI.getServerStatus(serverIP, {}, function (err, status) {  
+	getJSON('https://api.mcsrvstat.us/3/' + serverIP, function (err, data) {
 		if (err) {
-			document.querySelector(statusQuerySel).innerHTML = 'Error';
+			document.querySelector(statusQuerySel).innerHTML = 'Offline';
 			document.getElementById(divQuerySel).classList.add("offline");
+			console.log(serverIP + " returned error: " + err);
 			return;
 		}
-		document.querySelector(statusQuerySel).innerHTML = status.online ? 'Online' : 'Offline';
-		if (status.online) {
+		document.querySelector(statusQuerySel).innerHTML = data.online ? 'Online' : 'Offline';
+		if (data.online) {
 			document.getElementById(divQuerySel).classList.remove("offline");
+			document.querySelector(countQuerySel).innerHTML = "Players: " + data.players.online + "/" + data.players.max;
+			// list current players if any are online
+			if (data.players.online > 0) {
+				var playerList = "<br>";
+				for (let i = 0; i < data.players.online; i++) {
+					playerList = playerList + "- " + data.players.list[i]["name"] + "<br>";
+				} 
+				document.querySelector(listQuerySel).innerHTML = playerList;
+			}
 		}
-		document.querySelector(countQuerySel).innerHTML = status.players.now + "/" + status.players.max;
-		if (status.players.now > 0) {
-			var playerList = "<br>";
-			for (let i = 0; i < status.players.now; i++) {
-				playerList = playerList + "- " + status.players.sample[i]["name"] + "<br>";
-			} 
-			document.querySelector(listQuerySel).innerHTML = playerList;
-		}
+
 	});
 }
-getOnlineStatus('mc.nauvis.dev', '.serverStatus1', '.playerCount1', '.playerList1', 'server1Div');
-getOnlineStatus('kate.nauvis.dev', '.serverStatus2', '.playerCount2', '.playerList2', 'server2Div');
+
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+};
+
+//getOnlineStatus('v.nauvis.dev', '.serverStatus_v', '.playerCount_v', '.playerList_v', 'server_v');
+getOnlineStatus('mc.nauvis.dev', '.serverStatus_mc', '.playerCount_mc', '.playerList_mc', 'server_mc');
+getOnlineStatus('kate.nauvis.dev', '.serverStatus_kate', '.playerCount_kate', '.playerList_kate', 'server_kate');

@@ -29,10 +29,13 @@ input {
     padding: 50px;
 	border-radius: 25px;
 }
-#server1Div {
+#server_v {
 	background-color: #6fc276;
 }
-#server2Div {
+#server_mc {
+	background-color: #ADD8E6;
+}
+#server_kate {
 	background-color: #ff99b3;
 }
 .offline {
