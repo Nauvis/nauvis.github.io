@@ -29,14 +29,14 @@ input {
     padding: 50px;
 	border-radius: 25px;
 }
-#server_v {
-	background-color: #6fc276;
-}
 #server_mc {
 	background-color: #ADD8E6;
 }
 #server_kate {
 	background-color: #ff99b3;
+}
+#server_one {
+	background-color: #6fc276;
 }
 .offline {
 	background-color: #ccc !important;

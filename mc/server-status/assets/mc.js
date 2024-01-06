@@ -38,6 +38,6 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-//getOnlineStatus('v.nauvis.dev', '.serverStatus_v', '.playerCount_v', '.playerList_v', 'server_v');
 getOnlineStatus('mc.nauvis.dev', '.serverStatus_mc', '.playerCount_mc', '.playerList_mc', 'server_mc');
 getOnlineStatus('kate.nauvis.dev', '.serverStatus_kate', '.playerCount_kate', '.playerList_kate', 'server_kate');
+getOnlineStatus('one.nauvis.dev', '.serverStatus_one', '.playerCount_one', '.playerList_one', 'server_one');
