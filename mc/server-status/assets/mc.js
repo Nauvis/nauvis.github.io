@@ -1,25 +1,25 @@
-function getOnlineStatus(serverIP, statusQuerySel, countQuerySel, listQuerySel, divQuerySel) {
-	getJSON('https://api.mcsrvstat.us/3/' + serverIP, function (err, data) {
+function getOnlineStatus(serverIP, element) {
+	getJSON('https://api.mcsrvstat.us/3/' + serverIP, function (err, serverAPI) {
+		element.innerHTML = serverIP + "</b><br><br>";
+		element.innerHTML = element.innerHTML + "Status: ";
 		if (err) {
-			document.querySelector(statusQuerySel).innerHTML = 'Offline';
-			document.getElementById(divQuerySel).classList.add("offline");
+			element.innerHTML = element.innerHTML + "Error<br><br>"
+			element.setAttribute("class", "centered-content offline");
 			console.log(serverIP + " returned error: " + err);
 			return;
 		}
-		document.querySelector(statusQuerySel).innerHTML = data.online ? 'Online' : 'Offline';
-		if (data.online) {
-			document.getElementById(divQuerySel).classList.remove("offline");
-			document.querySelector(countQuerySel).innerHTML = "Players: " + data.players.online + "/" + data.players.max;
-			// list current players if any are online
-			if (data.players.online > 0) {
-				var playerList = "<br>";
-				for (let i = 0; i < data.players.online; i++) {
-					playerList = playerList + "- " + data.players.list[i]["name"] + "<br>";
+		var serverStatus = serverAPI.online ? 'Online' : 'Offline';
+		element.innerHTML = element.innerHTML + serverStatus+"<br><br>"
+		if (serverAPI.online) {
+			element.innerHTML = element.innerHTML + "Players: " + serverAPI.players.online + "/" + serverAPI.players.max + "<br>";
+			if (serverAPI.players.online > 0) {
+				var playerList = "";
+				for (let i = 0; i < serverAPI.players.online; i++) {
+					playerList = playerList + "- " + serverAPI.players.list[i]["name"] + "<br>";
 				} 
-				document.querySelector(listQuerySel).innerHTML = playerList;
+				element.innerHTML = element.innerHTML + playerList;
 			}
 		}
-
 	});
 }
 
@@ -38,6 +38,21 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-getOnlineStatus('mc.nauvis.dev', '.serverStatus_mc', '.playerCount_mc', '.playerList_mc', 'server_mc');
-getOnlineStatus('kate.nauvis.dev', '.serverStatus_kate', '.playerCount_kate', '.playerList_kate', 'server_kate');
-getOnlineStatus('one.nauvis.dev', '.serverStatus_one', '.playerCount_one', '.playerList_one', 'server_one');
+const serverListDiv = document.getElementById("serverList");
+const server = {
+  1: { subdomain: "mc", 	color: '#ADD8E6' },
+  2: { subdomain: "kate", 	color: '#FF99B3' },
+  3: { subdomain: "one", 	color: '#6FC276' }
+};
+for (let i = 1; i <= Reflect.ownKeys(server).length; i++) {
+	var serverIP = server[i]["subdomain"]+".nauvis.dev";
+	var element = document.createElement("tr");
+	element.style.backgroundColor = server[i]["color"];
+	element.style.fontWeight = "bold";
+	element.setAttribute("class", "centered-content");
+	element.innerHTML = serverIP + "</b><br><br>";
+	element.innerHTML = element.innerHTML + "Status: Pending";
+	serverListDiv.appendChild(element);
+	getOnlineStatus(serverIP, element);
+	serverListDiv.appendChild(document.createTextNode(" ")); // spacer
+}
