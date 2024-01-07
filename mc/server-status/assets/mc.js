@@ -41,7 +41,7 @@ var getJSON = function(url, callback) {
 const serverListDiv = document.getElementById("serverList");
 const server = {
   1: { subdomain: "mc", 	color: '#ADD8E6' },
-  2: { subdomain: "kate", 	color: '#FF99B3' },
+  2: { subdomain: "kate", 	color: '#E69F96' },
   3: { subdomain: "one", 	color: '#6FC276' }
 };
 for (let i = 1; i <= Reflect.ownKeys(server).length; i++) {
