@@ -1,6 +1,9 @@
 $('input').on('input',function(e){
 	var v = this.id;
 	var parentDivID = $(this).parent().closest('div').attr('id');
+	if (!$(this).parent().closest('div').hasClass('portal')) {
+		return;
+	}
 	blnAltInput = (v == "oCoords" || v == "nCoords");
 	if (blnAltInput) {
 		altInput(this, parentDivID)

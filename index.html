@@ -26,9 +26,9 @@
 				</div>
 				<nav>
 					<ul>
-						<!--<li><a href="#about">About</a></li>-->
 						<li><a href="#modding">Modding</a></li>
 						<li><a href="#links">Links</a></li>
+						<li><a href="#tools">Tools</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -36,14 +36,61 @@
 
 		<!-- Main -->
 			<div id="main">
+			
+				<!-- Tools -->
+				<article id="tools">
+				<h2 class="major">My Tools</h2>
+				<h3>Minecraft</h3>
+					<ul>
+						<li><a href="#server">Minecraft Server Status</a></li>
+						<li><a href="#portal">Nether Portal Calculator</a></li>
+					</ul>
+				<h3>FFXIV</h3>
+					<ul>
+						<li>PoTD 1-10 Sixth Sense (
+								<a href="potd/A" target="_blank">Layout A</a> | 
+								<a href="potd/B" target="_blank">Layout B</a> )</li>
+						<li><a href="blu" target="_blank">BLU Spell Checklist</a></li>
+						<li><a href="p4s" target="_blank">P4S Cheat Sheet</a>	( 
+								<a href="p4s/tank" target="_blank">Tank</a>		| 
+								<a href="p4s/heal" target="_blank">Heal</a>		| 
+								<a href="p4s/dps" target="_blank">DPS</a>		) </li>
+						<li><a href="p9s" target="_blank">P9S Cheat Sheet</a></li>
+					</ul>
+				
+				
+				</article>
 					
-				<!-- About -->
-					<!--<article id="about">
-						<h2 class="major">About</h2>
-						<span class="image main"><img src="images/pic04.jpg" alt="" loading="lazy"/></span>
-						<p>secret blah blah</p>
-						<p>blah blah nope</p>
-					</article>-->
+				<!-- Server List -->
+				<article id="server">
+					<table id="mcServerList"></table>
+				</article>
+
+				<!-- Portal -->
+				<article id="portal">
+					<form>
+						<div class="fields">
+							<div class="field half portal overworld" id="oCoordsDiv">
+								<label for="oCoordsX">Overworld Coords</label>
+								<input type="text" id="oCoordsX" placeholder="X"></input>
+								<input type="text" id="oCoordsY" placeholder="Y"></input>
+								<input type="text" id="oCoordsZ" placeholder="Z"></input>
+								<br>
+								<label for="oCoords">Alt</label>
+								<input type="text" id="oCoords" placeholder="X Y Z"></input>
+							</div>
+							<div class="field half portal nether" id="nCoordsDiv">
+								<label for="nCoordsX">Nether Coords</label>
+								<input type="text" id="nCoordsX" placeholder="X"></input>
+								<input type="text" id="nCoordsY" placeholder="Y"></input>
+								<input type="text" id="nCoordsZ" placeholder="Z"></input>
+								<br>
+								<label for="nCoords">Alt</label>
+								<input type="text" id="nCoords" placeholder="X Y Z"></input>
+							</div>
+						</div>
+					</form>
+				</article>
 
 				<!-- Modding -->
 					<article id="modding">
@@ -115,7 +162,7 @@
 						
 						<h3>BLU</h3>
 						<ul>
-							<li><a href="https://nauvis.dev/blu" target="_blank">BLU Spell Checklist</a></li>
+							<li><a href="blu" target="_blank">BLU Spell Checklist</a></li>
 							<li><a href="https://astralflamesblog.wordpress.com/aurics-guide-to-the-masked-carnivale/" target="_blank">BLU Carnival 1-32 Guide</a></li>
 						</ul>
 						
@@ -154,8 +201,8 @@
 						<h3>Deep Dungeons</h3>
 						<ul>
 							<li>PoTD 1-10 Sixth Sense (
-								<a href="https://nauvis.dev/potd/A" target="_blank">Layout A</a> | 
-								<a href="https://nauvis.dev/potd/B" target="_blank">Layout B</a> )</li>
+								<a href="potd/A" target="_blank">Layout A</a> | 
+								<a href="potd/B" target="_blank">Layout B</a> )</li>
 							<li><a href="https://www.ddcompendium.com/" target="_blank">Per Floor Breakdown</a></li>
 							<li><a href="https://docs.google.com/document/d/1oV_SIs5L9kD_NHO2ZsU4Tw8R6iQ4v1RC5fZPQqK6cD8/edit" target="_blank">Maygi - PoTD</a></li>
 							<li><a href="https://docs.google.com/document/d/1YVBSTOgJO-xOAB6YyKZEZRikjXFPle6Ihf_E7VdmQnI/edit" target="_blank">Maygi - HoH</a></li>
@@ -172,11 +219,11 @@
 						<h3>Tryhard</h3>
 						<ul>
 							<li><a href="https://docs.google.com/spreadsheets/d/1741sJGVHR02S6-E8wxBlD8FsptGEmwCRm6uRc68oHVY/edit?usp=sharing" target="_blank">Complete Dungeon/Trial Guides</a></li>
-							<li><a href="https://nauvis.dev/p4s" target="_blank">P4S Cheat Sheet</a>	( 
-								<a href="https://www.nauvis.dev/p4s/tank" target="_blank">Tank</a>		| 
-								<a href="https://www.nauvis.dev/p4s/heal" target="_blank">Heal</a>		| 
-								<a href="https://www.nauvis.dev/p4s/dps" target="_blank">DPS</a>		) </li>
-							<li><a href="https://nauvis.dev/p9s" target="_blank">P9S Cheat Sheet</a></li>
+							<li><a href="p4s" target="_blank">P4S Cheat Sheet</a>	( 
+								<a href="p4s/tank" target="_blank">Tank</a>		| 
+								<a href="p4s/heal" target="_blank">Heal</a>		| 
+								<a href="p4s/dps" target="_blank">DPS</a>		) </li>
+							<li><a href="p9s" target="_blank">P9S Cheat Sheet</a></li>
 						</ul>
 						
 						<h3>Housing</h3>
@@ -238,6 +285,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/portal.js"></script>
 	<script> function copyDisc() { navigator.clipboard.writeText("nauvis"); } </script>
 </body>
 </html>
