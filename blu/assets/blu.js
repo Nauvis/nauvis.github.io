@@ -1,8 +1,6 @@
-$(function() {
-	$("input[type='checkbox']").change(function() {
+$(document).on("change", "input[type='checkbox']", function () {
 		$(this).closest('tr').toggleClass("highlight", this.checked)
 		toggleSpell($(this).attr('id'));
-	});
 });
 
 document.querySelector('#spells')
@@ -63,14 +61,14 @@ function toggleMode() {
 	$("#divSpells").toggle();
 }
 
-function selectAll() { // for length of encodeCompatLength, set query to '_'
+function selectAll() {
 	console.log("selectAll prior state: " + spells);
 	var loopSpell = "";
-	for (let i = 0; i < encodeCompatLength; i++) {
-		loopSpell += '_';
+	for (let i = 0; i < maxSpells; i++) {
+		loopSpell += '1';
 	}
-	spells = urlDecode(loopSpell);
-	setQueryVariable("spells", loopSpell);
+	spells = loopSpell;
+	setQueryVariable("spells", urlEncode(spells));
 	if (gridMode) {
 		displayPage();
 	} else {
@@ -78,14 +76,14 @@ function selectAll() { // for length of encodeCompatLength, set query to '_'
 	}
 }
 
-function clearAll() { // for length of encodeCompatLength, set query to 'A'
+function clearAll() {
 	console.log("clearAll prior state: " + spells);
 	var loopSpell = "";
-	for (let i = 0; i < encodeCompatLength; i++) {
-		loopSpell += 'A';
+	for (let i = 0; i < maxSpells; i++) {
+		loopSpell += '0';
 	}
-	spells = urlDecode(loopSpell);
-	setQueryVariable("spells", loopSpell);
+	spells = loopSpell;
+	setQueryVariable("spells", urlEncode(spells));
 	if (gridMode) {
 		displayPage();
 	} else {
@@ -187,12 +185,14 @@ function urlDecode(input) {
 }
 
 function blankSpells() {
+	console.log(maxSpells);
 	var zeroString = "";
 	for (let i = 0; i < maxSpells; i++) {
 		zeroString += 0;
 	}
 	checkedTotal = 0;
 	updateCounter();
+	console.log(zeroString);
 	return zeroString;
 }
 
@@ -232,40 +232,100 @@ function trimSpells() {
 	return patchSpells
 }
 
+function getBluSpells(parentDiv) {
+	getJSON('../assets/json/blu.json', function (err, bluSpellAPI) {
+		if (err) {
+			console.log(err);
+			return;
+		}
+		var spellParent = null;
+		var checkmarkParent = null;
+		var spellChild = null;
+		maxSpells = Object.keys(bluSpellAPI).length;
+		for (let i = 1; i <= maxSpells; i++) {
+			spellParent = document.createElement("tr");
+			spellParent.setAttribute("id", "tr"+i);
+			parentDiv.appendChild(spellParent);
+			
+			checkmarkParent = document.createElement("td");
+			spellChild = document.createElement("input");
+			spellChild.setAttribute("type", "checkbox");
+			spellChild.setAttribute("id", i);
+			checkmarkParent.appendChild(spellChild);
+			spellParent.appendChild(checkmarkParent);
+			
+			spellChild = document.createElement("td");
+			spellChild.innerHTML = i;
+			spellParent.appendChild(spellChild);
+			
+			spellChild = document.createElement("td");
+			spellChild.innerHTML = bluSpellAPI[i]["name"];
+			spellParent.appendChild(spellChild);
+			
+			spellChild = document.createElement("td");
+			spellChild.innerHTML = bluSpellAPI[i]["get"];
+			spellParent.appendChild(spellChild);
+			
+			spellChild = document.createElement("td");
+			spellChild.innerHTML = bluSpellAPI[i]["note"];
+			spellParent.appendChild(spellChild);
+		}
+		
+		encodeCompatLength = Math.ceil((Math.ceil(maxSpells/8)*8)/6);
+		document.getElementById('r1').checked = true;
+		spells = getQueryVariable("spells");
+		if (spells.length < encodeCompatLength) { // if spells length indicates an old patch version, pad the right with blank slots to fix.
+			console.log("Old patch link detected: '" + spells + "'");
+			spells = padSpells();
+		}
+		if (spells.length > encodeCompatLength) { // trim any spaces or artifacts on the right of the url
+			console.log("Attempting to trim excess query data: '" + spells + "'");
+			spells = trimSpells();
+		}
+		if (spells) {
+			try {
+				// try to decode
+				spells = urlDecode(spells);
+				// then apply across checkboxes
+				loadSpells();
+			} catch {
+				// invalid input, set to default
+				console.error("Invalid spells on load: " + spells);
+				setQueryVariable("spells", urlEncode(blankSpells()));
+				spells = blankSpells();
+			}
+		} else {
+			// no spells supplied, set to default
+			setQueryVariable("spells", urlEncode(blankSpells()));
+			spells = blankSpells();
+		}
+	});
+}
+
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+};
+
 // global
 var baseUrl = location.protocol + '//' + location.host + location.pathname;
 baseUrl = baseUrl.replace(/\.html$/, '');
 window.history.replaceState('', '', baseUrl + location.search);
-const maxSpells = 124;
-const encodeCompatLength = 22;
+var maxSpells = 0;
 var checkedTotal = 0;
 var gridMode = false;
 var gridPage = 1;
-document.getElementById('r1').checked = true;
-var spells = getQueryVariable("spells");
-if (spells.length < encodeCompatLength) { // if spells length indicates an old patch version, pad the right with blank slots to fix.
-	console.log("Old patch link detected: '" + spells + "'");
-	spells = padSpells();
-}
-if (spells.length > encodeCompatLength) { // trim any spaces or artifacts on the right of the url
-	console.log("Attempting to trim excess query data: '" + spells + "'");
-	spells = trimSpells();
-
-}
-if (spells) {
-	try {
-		// try to decode
-		spells = urlDecode(spells);
-		// then apply across checkboxes
-		loadSpells();
-	} catch {
-		// invalid input, set to default
-		console.error("Invalid spells on load: " + spells);
-		setQueryVariable("spells", urlEncode(blankSpells()));
-		spells = blankSpells();
-	}
-} else {
-	// no spells supplied, set to default
-	setQueryVariable("spells", urlEncode(blankSpells()));
-	spells = blankSpells();
-}
+var encodeCompatLength = 0;
+var spells = null;
+const parentDiv = document.getElementById("spells")
+getBluSpells(parentDiv);

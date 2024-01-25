@@ -1,0 +1,622 @@
+{
+  "1": {
+    "name": "Water Cannon",
+    "get": "BLU Quest",
+    "note": "You start with this one"
+  },
+  "2": {
+    "name": "Flame Thrower",
+    "get": "Gobmachine G-VI from Brayflox's Longstop (Hard)<br>Magitek Gunship from The Keeper of the Lake<br>Omega from Alphascape V3.0",
+    "note": "Have to run Alphascape 3 for #94 Mustard Bomb & #101 Peripheral Synthesis anyways."
+  },
+  "3": {
+    "name": "Aqua Breath",
+    "get": "Ultros from The Dragon's Neck<br>Leviathan from The Whorleater (Hard), The Whorleater (Extreme)<br>Ultros from Stage 20 Masked Carnivale - Miss Typhon",
+    "note": ""
+  },
+  "4": {
+    "name": "Flying Frenzy",
+    "get": "Cornu - Rank A Elite Mark in Outer La Noscea<br>Zu (2nd Boss) from Pharos Sirius (Kill 2 eggs to trigger the Boss to cast)<br>Alpha Zu from Unhidden Leather Map",
+    "note": "If Pharos, can snag #4 Flying Frenzy, #9 Song of Torment, #63 Sonic boom, #77 Aetheric Mimicry in 1 synced run."
+  },
+  "5": {
+    "name": "Drill Cannons",
+    "get": "Magitek Vanguard H-2 - Northern Thanalan (x16,y15)",
+    "note": ""
+  },
+  "6": {
+    "name": "High Voltage",
+    "get": "ADS from The Binding Coil of Bahamut - Turn 1 (1st Boss)<br>The Binding Coil of Bahamut - Turn 2 (1st Boss)<br>Bestial Node from Stage 15 Masked Carnivale - The Me Nobody Nodes",
+    "note": "Can unsync t1 easily to get solo."
+  },
+  "7": {
+    "name": "Loom",
+    "get": "Flame Sergeant Dalvag - Rank B Elite Mark in Northern Thanalan<br>Dantalion (Trash) & Phantom Knight (Trash) in The Tam-Tara Deepcroft (Hard)<br>Baalzephon from The Lost City of Amdapor",
+    "note": "Tam Tara can unsync if need, drop chance doesnt seem bad. (but easy in a party synced anyways)"
+  },
+  "8": {
+    "name": "Final Sting",
+    "get": "Killer Wespe - Middle La Noscea (x15,y15)",
+    "note": ""
+  },
+  "9": {
+    "name": "Song of Torment",
+    "get": "Siren (Last Boss) from Pharos Sirius<br>Aglaope - Rank S Elite Mark in Il Mheg",
+    "note": "If Pharos, can snag #4 Flying Frenzy, #9 Song of Torment, #63 Sonic boom, #77 Aetheric Mimicry in 1 synced run."
+  },
+  "10": {
+    "name": "Glower",
+    "get": "Coincounter (2nd Boss) from The Aurum Vale<br>Brontes - Rank S Elite Mark in Central Thanalan",
+    "note": "100% drop rate even unsynced from Aurum Vale."
+  },
+  "11": {
+    "name": "Plaincracker",
+    "get": "Clay Golem - North Shroud (x19,y29)<br>Sandstone Golem - Southern Thanalan (x24,y13)<br>Basalt Golem - Outer La Noscea (x16,y16)",
+    "note": ""
+  },
+  "12": {
+    "name": "Bristle",
+    "get": "Wild Boar - East Shroud (x18,y24)",
+    "note": "No cast bar, it's when the boar puts a boost effect on itself"
+  },
+  "13": {
+    "name": "White Wind",
+    "get": "BLU Totem - Learn 10 spells",
+    "note": ""
+  },
+  "14": {
+    "name": "Level 5 Petrify",
+    "get": "Manor Sentry from Haukke Manor",
+    "note": "Last boss add, Manor Sentry. (not the one before the fight) Dmg boss to get her to spawn adds, have to get him to 20% or lower to bait the spell.<br>Can optionally grab #16 Ice Spikes, and #17 Blood Drain while you're there"
+  },
+  "15": {
+    "name": "Sharpened Knife",
+    "get": "Marberry - Rank A Elite Mark in Upper La Noscea<br>Tonberry King (Last Boss) from The Wanderer's Palace",
+    "note": "No cast bar. Probably best synced if the A rank isnt up."
+  },
+  "16": {
+    "name": "Ice Spikes",
+    "get": "Trickster Imp - Level 9 Central Shroud (x27,y24)<br>Vandalous Imp - Eastern Thanalan (x15,y19)<br>Manor Jester (Second Boss) from Haukke Manor<br>Azulmagia from Stage 25 Masked Carnivale - Dirty Rotten Azulmagia",
+    "note": ""
+  },
+  "17": {
+    "name": "Blood Drain",
+    "get": "Chigoe - Level 5-7 Central Shroud (x25,y20)<br>Cave Bat - Level 7 Lower La Noscea (x27,y16)<br>Sun Bat - Central Thanalan (x26,y18)<br>Dusk Bat - Western La Noscea (x27,y24)<br>Black Bat - East Shroud (x17,y23)<br>Sand Bat - Cutter's Cry",
+    "note": "Cutter's Cry can grab #17 Blood Drain (Sand bat), #21 Self Destruct (Shrapnel), #33 The Ram's Voice/#34 The Dragon's Voice (Last boss), #36 1000 Needles (Sabotender Desertor)"
+  },
+  "18": {
+    "name": "Acorn Bomb",
+    "get": "Treant Sapling - North Shroud (x27,y28)<br>Treant Sapling - Central Shroud (x27,y15)<br>Treant Sapling - East Shroud (x13,y25)",
+    "note": "No cast bar, puts you to sleep."
+  },
+  "19": {
+    "name": "Bomb Toss",
+    "get": "Goblin Fisher & Goblin Gambler - Level 5-7 Middle La Noscea (x23,y21)<br>Goblin Glider & Goblin Brandisher - The Dravanian Hinterlands (x29,y23)",
+    "note": ""
+  },
+  "20": {
+    "name": "Off-Guard",
+    "get": "BLU Totem - Learn 5 spells",
+    "note": ""
+  },
+  "21": {
+    "name": "Self-Destruct",
+    "get": "Glide Bomb Level 12 - Western Thanalan (x27,y16)<br>Arena Cherry Bomb from Stage 8 Masked Carnivale - The Bomb-edy of Errors<br>Shrapnel from Cutter's Cry",
+    "note": "Can also snag from carnival #8 if doing anyways.<br>Cutter's Cry can grab #17 Blood Drain (Sand bat), #21 Self Destruct (Shrapnel), #33 The Ram's Voice/#34 The Dragon's Voice (Last boss), #36 1000 Needles (Sabotender Desertor)"
+  },
+  "22": {
+    "name": "Transfusion",
+    "get": "BLU Totem - Learn 20 spells",
+    "note": ""
+  },
+  "23": {
+    "name": "Faze",
+    "get": "Qiqirn Shellsweeper - Level 9 Central Thanalan (x16,y19)<br>Qiqirn Eggdigger - Lower La Noscea (x18,y35)<br>Qiqirn Gullroaster - Eastern La Noscea (x26,y32)",
+    "note": ""
+  },
+  "24": {
+    "name": "Flying Sardine",
+    "get": "Apkallu - Eastern La Noscea (x27,y35)",
+    "note": ""
+  },
+  "25": {
+    "name": "Snort",
+    "get": "Typhon from The Dragon's Neck<br>Typhon from Stage 20 Masked Carnivale - Miss Typhon<br>Typhon from Stage 27 Masked Carnivale - Lock up Your Snorters",
+    "note": "Other snort spells wont count, look for flat out \"Snort\" cast bar.<br>Can also grab #26 4-tonze Weight. If rushed, stage 27 is easy."
+  },
+  "26": {
+    "name": "4-tonze Weight",
+    "get": "Ultros from The Dragon's Neck",
+    "note": "Phase 2, when he's below 80% health."
+  },
+  "27": {
+    "name": "The Look",
+    "get": "Anantaboga (Last Boss) from Amdapor Keep<br>Bibliolater from The Great Gubal Library (Hard)",
+    "note": "Can grab #60 Magic Hammer (Apanda) & #76 Condensed Libra (Mechanoscribe) as well if you go library.<br>Bibliolater mob is in second trash pack"
+  },
+  "28": {
+    "name": "Bad Breath",
+    "get": "Stroper - Central Shroud (x13,y21)<br>Halitostroper - Central Shroud (x15,y21)<br>Stroper - South Shroud (x20,y28)",
+    "note": ""
+  },
+  "29": {
+    "name": "Diamondback",
+    "get": "Horde Armored Dragon from Steps of Faith trial.<br>Cuca Fera (2nd Boss) from The Stone Vigil (Hard)",
+    "note": "Trials maybe quicker, but if you go stone virgil the 2nd boss is vulnerable to #35 Missile."
+  },
+  "30": {
+    "name": "Mighty Guard",
+    "get": "BLU Totem - Learn 10 spells",
+    "note": ""
+  },
+  "31": {
+    "name": "Sticky Tongue",
+    "get": "Toxic Toad - Central Thanalan (x27,y19)<br>Laughing Toad - Western Thanalan (x15,y7)<br>Gigantoad - Eastern La Noscea (x18,y26)",
+    "note": "Can get with #32 Toad Oil, or in Aurum Vale too at the very start."
+  },
+  "32": {
+    "name": "Toad Oil",
+    "get": "Giggling Gigantoad - Western Thanalan (x15,y7)",
+    "note": ""
+  },
+  "33": {
+    "name": "The Ram's Voice",
+    "get": "Chimera (Last Boss) from Cutter's Cry<br>Apademak from Stage 21 Masked Carnivale - Chimera on a Hot Tin Roof<br>Azulmagia from Stage 25 Masked Carnivale - Dirty Rotten Azulmagia",
+    "note": "Can do synced or not. Can get from carnival rounds #21, #25 too.<br>Always cast alongside #34 The Dragon's Voice<br>Cutter's Cry can grab #17 Blood Drain (Sand bat), #21 Self Destruct (Shrapnel), #33 The Ram's Voice/#34 The Dragon's Voice (Last boss), #36 1000 Needles (Sabotender Desertor)"
+  },
+  "34": {
+    "name": "The Dragon's Voice",
+    "get": "Chimera (Last Boss) from Cutter's Cry<br>Apademak from Stage 21 Masked Carnivale - Chimera on a Hot Tin Roof<br>Azulmagia from Stage 25 Masked Carnivale - Dirty Rotten Azulmagia",
+    "note": "Always cast alongside #33: The Ram's Voice"
+  },
+  "35": {
+    "name": "Missile",
+    "get": "Enkidu from Battle in the Big Keep",
+    "note": "Cleanse the minimise debuffs ASAP, reduce Enkidu to between 40% and 50% HP, and then wait until Chicken/Missile are cast.<br>Enkidu will fire missile at a player, leaving fire underneath, but only during Gildamesh's chicken debuff attack."
+  },
+  "36": {
+    "name": "1000 Needles",
+    "get": "Sabotender Bailaor in Flower Power - Levequest in Southern Thanalan (x18,y13)<br>Sabotender Bailaor - Southern Thanalan (x16,y15)<br>Sabotender Desertor from Cutter's Cry",
+    "note": ""
+  },
+  "37": {
+    "name": "Ink Jet",
+    "get": "Kraken from Sastasha (Hard)",
+    "note": "Last boss. Attack is aoe called Ink Blast. Dodge and kill Body/Kraken Arms, not tentacles."
+  },
+  "38": {
+    "name": "Fire Angon",
+    "get": "Frumious Koheel Ja from The Wanderer's Palace (Hard)",
+    "note": "First boss, no cast bar. Boss is vuln to death spells, can use to murder after cast."
+  },
+  "39": {
+    "name": "Moon Flute",
+    "get": "BLU Carnival - Beat any 10 carnival stages",
+    "note": ""
+  },
+  "40": {
+    "name": "Tail Screw",
+    "get": "Crag Claw - The Peaks (x25,y11)",
+    "note": ""
+  },
+  "41": {
+    "name": "Mind Blast",
+    "get": "Galvanth the Dominator from The Tam-Tara Deepcroft",
+    "note": "Last boss. 100% drop chance even unsynced.<br>Can also get from mindflayer add during last boss."
+  },
+  "42": {
+    "name": "Doom",
+    "get": "BLU Carnival - Beat any 20 carnival stages",
+    "note": ""
+  },
+  "43": {
+    "name": "Peculiar Light",
+    "get": "Lentic Mudpuppy - Mor Dhona (x13,y10)<br>Loch Nanka - The Lochs (x17,y20)",
+    "note": ""
+  },
+  "44": {
+    "name": "Feather Rain",
+    "get": "Garuda from The Howling Eye (Extreme)",
+    "note": "No cast bar, its when a ton of small aoe's appear. Can unsync and spam quickly."
+  },
+  "45": {
+    "name": "Eruption",
+    "get": "Ifrit from The Bowl of Embers, The Bowl of Embers (Hard), The Bowl of Embers (Extreme)",
+    "note": ""
+  },
+  "46": {
+    "name": "Mountain Buster",
+    "get": "Titan from The Navel (Hard), The Navel (Extreme)",
+    "note": "No cast bar, its the tank buster."
+  },
+  "47": {
+    "name": "Shock Strike",
+    "get": "The striking tree (hard)",
+    "note": "No cast bar, its the tank buster. (and he likes using it a lot)"
+  },
+  "48": {
+    "name": "Glass Dance",
+    "get": "Shiva from Akh Afah Amphitheatre (Extreme)",
+    "note": "No cast bar, its the wide arc of ice arrows when bow attack is up. low unsync chance, but annoying to sync as blu."
+  },
+  "49": {
+    "name": "Veil of the Whorl",
+    "get": "Leviathan from The Whorleater (Hard), The Whorleater (Extreme)",
+    "note": "No cast bar, its the reflect buff"
+  },
+  "50": {
+    "name": "Alpine Draft",
+    "get": "Griffin - The Sea of Clouds (x36,y9)<br>True Griffin - The Peaks (x27,y25)",
+    "note": ""
+  },
+  "51": {
+    "name": "Protean Wave",
+    "get": "Living Liquid (Last Boss) from Alexander - The Arm of the Father<br>Shikigami of the Undertow from Stage 29 Masked Carnivale Red, Fraught, and Blue",
+    "note": "The water pillars in stage 29 as well as the boss. Will probably get from the adds first."
+  },
+  "52": {
+    "name": "Northerlies",
+    "get": "Lone Yeti - Coerthas Western Highlands (x20,y31)<br>Slate Yeti - Coerthas Western Highlands (x17,y27)",
+    "note": ""
+  },
+  "53": {
+    "name": "Electrogenesis",
+    "get": "Conodont - The Sea of Clouds (x26,y33) )",
+    "note": "Careful to not mixup with their other cast \"Defibrillate\""
+  },
+  "54": {
+    "name": "Kaltstrahl",
+    "get": "Faust & Strum Doll from Alexander - The Fist of the Father<br>Jagd Doll from Alexander - The Cuff of the Father",
+    "note": "Mobs before faust fight, and mobs in faust fight."
+  },
+  "55": {
+    "name": "Abyssal Transfixion",
+    "get": "Ash from Haukke Manor (Hard)<br>Everlasting Bibliotaph from The Great Gubal Library",
+    "note": "Second boss. Can be unsynced easily if needed.<br>If library, fail the mechanic and summon 3rd set of adds."
+  },
+  "56": {
+    "name": "Chirp",
+    "get": "Paissa - The Sea of Clouds (x19,y35)",
+    "note": ""
+  },
+  "57": {
+    "name": "Eerie Soundwave",
+    "get": "Enkidu from Battle in the Big Keep<br>Empuse - Azys Lla (x29,y12)",
+    "note": "Might get while trying for #35 Missile"
+  },
+  "58": {
+    "name": "Pom Cure",
+    "get": "Furryfoot Kupli Kipp from Thornmarch (Hard) and Thornmarch (Extreme)",
+    "note": "Furryfoot Kupli Kipp. Hit another moogle to bait him to cast the heal on them.<br>As its from the adds preboss in trial, you can sync this and learn it and then just wipe after."
+  },
+  "59": {
+    "name": "Gobskin",
+    "get": "Alexandrian Hider & Alexandrian Slider from Alexander - The Breath of the Creator",
+    "note": "Adds before the fight."
+  },
+  "60": {
+    "name": "Magic Hammer",
+    "get": "Apanda from The Great Gubal Library (Hard)<br>Epilogi from Stage 24 Masked Carnivale - Amazing Technicolor Pit Fiends",
+    "note": "Apanda is an add before final boss. Careful not to stop him from casting, gets moody about recasting.<br>Can also grab #76 Condensed Libra (Mechanoscribe) and #27 The Look (Bibliolater)"
+  },
+  "61": {
+    "name": "Avail",
+    "get": "Queen Hawk from Saint Mocianne's Arboretum",
+    "note": "Second boss."
+  },
+  "62": {
+    "name": "Frog Legs",
+    "get": "Poroggo - The Dravanian Hinterlands (x12,y34)",
+    "note": "Stay melee range to bait cast (will be a circular aoe on them)"
+  },
+  "63": {
+    "name": "Sonic Boom",
+    "get": "Anzu - The Sea of Clouds (x25,y6)<br>Zu from Pharos Sirius",
+    "note": "Anzu, no cast bar will inflict windburn debuff"
+  },
+  "64": {
+    "name": "Whistle",
+    "get": "Dhalmel - The Sea of Clouds (x16,y32)<br>Jhammel - The Peaks (x26.5,y28.5)",
+    "note": ""
+  },
+  "65": {
+    "name": "White Knight's Tour",
+    "get": "White Knight from The Vault",
+    "note": "Hallway add. Spawns alongside Black knight for spell #66"
+  },
+  "66": {
+    "name": "Black Knight's Tour",
+    "get": "Black Knight from The Vault",
+    "note": "Hallway add. Spawns alongside White knight for spell #65"
+  },
+  "67": {
+    "name": "Level 5 Death",
+    "get": "Page 64 from The Great Gubal Library",
+    "note": "Page 64 adds in hallways. 5 chances, can unsync easily. Aggro, then break line of sight/range to bait quicker cast."
+  },
+  "68": {
+    "name": "Launcher",
+    "get": "Armored Weapon from Baelsar's Wall<br>Doman Armored Weapon from Doma Castle",
+    "note": "econd boss in Baelsar's Wall."
+  },
+  "69": {
+    "name": "Perpetual Ray",
+    "get": "Alexander - The Burden of the Father",
+    "note": "Shows in A8, but isnt obtainable there. Has to be A4"
+  },
+  "70": {
+    "name": "Cactguard",
+    "get": "Sabotender Guardia from The Sunken Temple of Qarn (Hard)",
+    "note": "Second boss's add. No cast bar, its the buff he casts on the boss right after spawning"
+  },
+  "71": {
+    "name": "Revenge Blast",
+    "get": "BLU Totem - Learn 50 spells",
+    "note": ""
+  },
+  "72": {
+    "name": "Angel Whisper",
+    "get": "BLU Carnival - Beat any 30 carnival stages",
+    "note": "Can skip stage #29 as it usually causes the most annoyance."
+  },
+  "73": {
+    "name": "Exuviation",
+    "get": "Abalathian Wamoura - The Sea of Clouds (x10,y17)",
+    "note": "Only 2 up at a time but quick respawn. Pull enemies near it and cast a debuff on them (like #3 Aqua Breath)"
+  },
+  "74": {
+    "name": "Reflux",
+    "get": "Cloud Wyvern - The Churning Mists (x24,y29)",
+    "note": "Only 2 up at a time but quick respawn."
+  },
+  "75": {
+    "name": "Devour",
+    "get": "Decaying Gourmand from The Lost City of Amdapor<br>Caduceus from The Binding Coil of Bahamut - Turn 1<br>Rafflesia from The Second Coil of Bahamut - Turn 1<br>Nullchu from Saint Mocianne's Arboretum (Hard)",
+    "note": "Lost city: Second boss, no cast bar, but its when he eats somebody. If solo, get it low and throw a DoT before eaten.<br>Can get from Saint Mocianne's Arboretum (Hard) along with #87 Feculent Flood (Last boss)"
+  },
+  "76": {
+    "name": "Condensed Libra",
+    "get": "Mechanoscribe from The Great Gubal Library (Hard)<br>Arena Scribe from Stage 24 Masked Carnivale - Amazing Technicolor Pit Fiends",
+    "note": "Before final boss. 5 chances if you go in unsynced. If synced also grab #60 Magic Hammer, and #27 The Look."
+  },
+  "77": {
+    "name": "Aetherial Mimicry",
+    "get": "Ghrah Luminary from Pharos Sirius (Hard)",
+    "note": "First boss's adds. The corrupted orbs. When they tether, touch a spider/bird. When the tether changes the spider/bird that was the spell."
+  },
+  "78": {
+    "name": "Surpanakha",
+    "get": "Ravana from Thok ast Thok (Hard) and Thok ast Thok (Extreme)",
+    "note": "Second half of the fight"
+  },
+  "79": {
+    "name": "Quasar",
+    "get": "Sophia from Containment Bay P1T6",
+    "note": "Phase 3, creates tethers and meteors."
+  },
+  "80": {
+    "name": "J Kick",
+    "get": "Brute Justice (Last Phase) from Alexander - The Burden of the Son",
+    "note": "No cast bar, its when he jumps back in the fight before the add phase (later in the fight). Careful to not burn too quick."
+  },
+  "81": {
+    "name": "Triple Trident",
+    "get": "Ebisu Catfish - Yanxia (x28,y6)",
+    "note": "Get alongside Spell #82"
+  },
+  "82": {
+    "name": "Tingle",
+    "get": "Ebisu Catfish - Yanxia (x28,y6)",
+    "note": "Get alongside spell #81"
+  },
+  "83": {
+    "name": "Tatami-gaeshi",
+    "get": "Dojun-maru from Kugane Castle",
+    "note": "Second boss"
+  },
+  "84": {
+    "name": "Cold Fog",
+    "get": "Mist Dragon from The Burn",
+    "note": "Last boss. When the expanding circle and the dragon heads appear, keep one head alive to let the boss finish the cast.<br>It's annoying to fight, recconended to be prepped with Diamondback etc, or bring a real healer as needed."
+  },
+  "85": {
+    "name": "Stotram",
+    "get": "Lakshmi from Emanation",
+    "note": "Early raidwide. Don't forget your duty actions."
+  },
+  "86": {
+    "name": "Saintly Beam",
+    "get": "Phantom Train from Sigmascape V1.0",
+    "note": "Its when the spotlight follows and explodes. Anybody kidnapped by a ghost as the boss dies won't learn the spell, wait for them to come back."
+  },
+  "87": {
+    "name": "Feculent Flood",
+    "get": "Tokkapchi (Final Boss) from Saint Mocianne's Arboretum (Hard)",
+    "note": "Last boss, halfway through the fight. Casts it at the mud slime. Remember to dmg the mud slime to push it away from aoe's and onto platforms.<br>Can also get #75 Devour from first boss."
+  },
+  "88": {
+    "name": "Angel's Snack",
+    "get": "BLU Level - BLU Lvl 70",
+    "note": ""
+  },
+  "89": {
+    "name": "Chelonian Gate",
+    "get": "Genbu from Hells' Lid",
+    "note": "Last boss"
+  },
+  "90": {
+    "name": "The Rose of Destruction",
+    "get": "Ivon Coeurlfist from Temple of the Fist",
+    "note": "Last boss, its the energy blast stack marker attack"
+  },
+  "91": {
+    "name": "Basic Instinct",
+    "get": "Master Coeurl - Upper La Noscea (x8.9, y21.4)",
+    "note": ""
+  },
+  "92": {
+    "name": "Ultravibration",
+    "get": "Kongamato - The Peaks (x11,y25)",
+    "note": ""
+  },
+  "93": {
+    "name": "Blaze",
+    "get": "Alte Roite from Deltascape V1.0",
+    "note": ""
+  },
+  "94": {
+    "name": "Mustard Bomb",
+    "get": "Omega from Alphascape V3.0",
+    "note": "Also get #101 Peripheral Synthesis, and optionally #2 Flame Thrower if you didnt already."
+  },
+  "95": {
+    "name": "Dragon Force",
+    "get": "BLU Totem - Learn 100 spells",
+    "note": ""
+  },
+  "96": {
+    "name": "Aetherial Spark",
+    "get": "Salt Dhruva - The Lochs (x22,y22)",
+    "note": ""
+  },
+  "97": {
+    "name": "Hydro Pull",
+    "get": "Kelpie from Drowned City of Skalla",
+    "note": "First boss"
+  },
+  "98": {
+    "name": "Malediction of Water",
+    "get": "Sai Taisui from The Swallow's Compass",
+    "note": "Before final boss. He's in that water push hallway, doing the water push, gives the water push spell. #102 Both Ends (Last boss) is right after this."
+  },
+  "99": {
+    "name": "Choco Meteor",
+    "get": "Courser Chocobo - The Dravanian Forelands (x37.5, y23.7)",
+    "note": ""
+  },
+  "100": {
+    "name": "Matra Magic",
+    "get": "BLU Totem - Learn 100 spells",
+    "note": ""
+  },
+  "101": {
+    "name": "Peripheral Synthesis",
+    "get": "Omega from Alphascape V3.0",
+    "note": "Also get #94 Mustard Bomb, and optionally #2 Flame Thrower if you didnt already."
+  },
+  "102": {
+    "name": "Both Ends",
+    "get": "Qitian Dasheng from The Swallow's Compass",
+    "note": "Last boss. Grab #98  Malediction of Water (Sai Taisui) right before this boss."
+  },
+  "103": {
+    "name": "Phantom Flurry",
+    "get": "Suzaku from Hells' Kier",
+    "note": ""
+  },
+  "104": {
+    "name": "Nightbloom",
+    "get": "Tsukuyomi from Castrum Fluminis",
+    "note": "Start of phase 2 where adds spawn."
+  },
+  "105": {
+    "name": "Goblin Punch",
+    "get": "Hobgoblin - Kholosia (x33,y33)",
+    "note": ""
+  },
+  "106": {
+    "name": "Right Round",
+    "get": "Greater Armadillo from Malikah's Well",
+    "note": "First boss, its the untelegraphed spinning knockback."
+  },
+  "107": {
+    "name": "Schiltron",
+    "get": "Long-tailed Armadillo - Amh Araeng (x17,y30)",
+    "note": "Get it to 20%-50% hp to bait the cast."
+  },
+  "108": {
+    "name": "Rehydration",
+    "get": "Slippery Armadillo - Amh Araeng (x32,y9)",
+    "note": ""
+  },
+  "109": {
+    "name": "Breath Of Magic",
+    "get": "BLU Level - BLU Lvl 80",
+    "note": ""
+  },
+  "110": {
+    "name": "Wild Rage",
+    "get": "Spectral Berserker from\tThe Heroes' Gauntlet",
+    "note": "Last boss, its when he does the knockback and carves out circles in the arena."
+  },
+  "111": {
+    "name": "Peat Pelt",
+    "get": "Mudman from Matoya's Relict",
+    "note": "First boss, its the mud ball tether mechanic. Can grab along with #122 Sea Shanty"
+  },
+  "112": {
+    "name": "Deep Clean",
+    "get": "Seeker Of Solitude from The Grand Cosmos",
+    "note": "First boss. Can grab along with #121 Mortal Flame"
+  },
+  "113": {
+    "name": "Ruby Dynamics",
+    "get": "The Ruby Weapon from Cinder Drift",
+    "note": "Possible to burn past. Donut aoe after the boss goes dash crazy."
+  },
+  "114": {
+    "name": "Divination Rune",
+    "get": "Titania from The Dancing Plague",
+    "note": "It's her cleave tankbuster. Can grab along with #124 Being Mortal"
+  },
+  "115": {
+    "name": "Dimensional Shift",
+    "get": "Eden Prime from Eden: Resurrection",
+    "note": "Its when the arena turns red during phase 1."
+  },
+  "116": {
+    "name": "Conviction Marcato",
+    "get": "Forgiven Obscenity from Mt Gulg",
+    "note": "Last boss, its the yellow circles under her."
+  },
+  "117": {
+    "name": "Force Field",
+    "get": "BLU Totem - Learn 120 spells",
+    "note": ""
+  },
+  "118": {
+    "name": "Winged Reprobation",
+    "get": "Innocence from The Crown of the Immaculate",
+    "note": "Phase 2, Two swords in the ground and 3 lines"
+  },
+  "119": {
+    "name": "Laser Eye",
+    "get": "Eden's Promise from Eden: Eternity",
+    "note": "It's the knockback during the memory segment."
+  },
+  "120": {
+    "name": "Candy Cane",
+    "get": "Aenc Thon from Dohn Mheg",
+    "note": "First boss, its the tankbuster bonk."
+  },
+  "121": {
+    "name": "Mortal Flame",
+    "get": "Lugus from The Grand Cosmos",
+    "note": "Last boss, its when you have to spread your fire to furniture or die. Can grab along with #112 Deep Clean"
+  },
+  "122": {
+    "name": "Sea Shanty",
+    "get": "Nixie from Matoya's Relict",
+    "note": "Second boss. Can grab along with #111 Peat Pelt"
+  },
+  "123": {
+    "name": "Apokalypsis",
+    "get": "Therion from Amaurot",
+    "note": "Last boss, cant miss, its the big line aoe that makes you step off the arena."
+  },
+  "124": {
+    "name": "Being Mortal",
+    "get": "Titania from The Dancing Plague",
+    "note": "It's her raidwide after the adds are defeated. Can grab along with #114 Divination Rune"
+  }
+}
