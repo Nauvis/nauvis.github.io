@@ -21,11 +21,9 @@ document.querySelector('#spells')
 		document.getElementById(y).click()
 	});
 
-$(function() {
-	$("input[type='radio']").change(function() {
-		gridPage = $(this).val();
+$(document).on("change", "input[type='radio']", function () {
+	gridPage = $(this).val();
 		displayPage();
-	});
 });
 
 document.querySelector('#spellsGrid')
@@ -232,7 +230,7 @@ function trimSpells() {
 	return patchSpells
 }
 
-function getBluSpells(parentDiv) {
+function getBluSpells() {
 	getJSON('../assets/json/blu.json', function (err, bluSpellAPI) {
 		if (err) {
 			console.log(err);
@@ -245,7 +243,7 @@ function getBluSpells(parentDiv) {
 		for (let i = 1; i <= maxSpells; i++) {
 			spellParent = document.createElement("tr");
 			spellParent.setAttribute("id", "tr"+i);
-			parentDiv.appendChild(spellParent);
+			spellsParentDiv.appendChild(spellParent);
 			
 			checkmarkParent = document.createElement("td");
 			spellChild = document.createElement("input");
@@ -269,6 +267,24 @@ function getBluSpells(parentDiv) {
 			spellChild = document.createElement("td");
 			spellChild.innerHTML = bluSpellAPI[i]["note"];
 			spellParent.appendChild(spellChild);
+		}
+		
+		var radioLabel = null;
+		var radioInput = null;
+		for (let i = 1; i <= Math.ceil(maxSpells/16); i++) {
+			radioLabel = document.createElement("label");
+			radioLabel.setAttribute("class", "radio-inline");
+			
+			radioInput = document.createElement("input");
+			radioInput.setAttribute("type", "radio");
+			radioInput.setAttribute("name", "page");
+			radioInput.setAttribute("value", i);
+			radioInput.setAttribute("id", "r"+i);
+			
+			radioLabel.appendChild(radioInput);
+			
+			radioLabel.innerHTML = radioLabel.innerHTML + i+" ";
+			radioParentDiv.appendChild(radioLabel);
 		}
 		
 		encodeCompatLength = Math.ceil((Math.ceil(maxSpells/8)*8)/6);
@@ -323,5 +339,6 @@ var gridMode = false;
 var gridPage = 1;
 var encodeCompatLength = 0;
 var spells = null;
-const parentDiv = document.getElementById("spells")
-getBluSpells(parentDiv);
+const spellsParentDiv = document.getElementById("spells")
+const radioParentDiv = document.getElementById("radio")
+getBluSpells(spellsParentDiv);
