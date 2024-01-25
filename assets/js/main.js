@@ -77,7 +77,6 @@
 			loadServerStatus();
 		}
 		if (id == "blu") {
-			console.log("blu");
 			getBluSpells();
 		}
 		
