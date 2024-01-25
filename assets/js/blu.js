@@ -1,4 +1,4 @@
-function getBluSpells(parentDiv) {
+function getBluSpells() {
 	getJSON('assets/json/blu.json', function (err, bluSpellAPI) {
 		if (err) {
 			console.log(err);
@@ -10,7 +10,7 @@ function getBluSpells(parentDiv) {
 		for (let i = 1; i <= Object.keys(bluSpellAPI).length; i++) {
 			spellParent = document.createElement("tr");
 			spellParent.setAttribute("id", "spell"+i);
-			parentDiv.appendChild(spellParent);
+			bluParentDiv.appendChild(spellParent);
 			
 			spellChild = document.createElement("td");
 			spellChild.innerHTML = i;
@@ -30,20 +30,4 @@ function getBluSpells(parentDiv) {
 		}
 	});
 }
-
-var getJSON = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status === 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status, xhr.response);
-      }
-    };
-    xhr.send();
-};
-const parentDiv = document.getElementById("bluSpellList")
-getBluSpells(parentDiv);
+const bluParentDiv = document.getElementById("bluSpellList")

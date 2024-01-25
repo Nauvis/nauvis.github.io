@@ -317,10 +317,6 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-// global
-var baseUrl = location.protocol + '//' + location.host + location.pathname;
-baseUrl = baseUrl.replace(/\.html$/, '');
-window.history.replaceState('', '', baseUrl + location.search);
 var maxSpells = 0;
 var checkedTotal = 0;
 var gridMode = false;
