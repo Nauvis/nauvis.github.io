@@ -1,4 +1,3 @@
-// minecraft server status
 function getOnlineStatus(serverIP, subdomain, element) {
 	getJSON('https://api.mcsrvstat.us/3/' + serverIP, function (err, serverAPI) {
 		element.innerHTML = serverIP + "<br>";
@@ -25,9 +24,12 @@ function getOnlineStatus(serverIP, subdomain, element) {
 
 const server = {
 	  1: { subdomain: "mc", 	color: '#ADD8E6', cacheexpire: 0 },
-	  2: { subdomain: "kate", 	color: '#E69F96', cacheexpire: 0 },
-	  3: { subdomain: "one", 	color: '#6FC276', cacheexpire: 0 }
+	  2: { subdomain: "kissi", 	color: '#006fb9', cacheexpire: 0 }
 	};
+
+/* 	  2: { subdomain: "kate", 	color: '#E69F96', cacheexpire: 0 },
+	  3: { subdomain: "one", 	color: '#6FC276', cacheexpire: 0 }
+*/
 
 function loadServerStatus() {
 	const serverListParent = document.getElementById("mcServerList");
