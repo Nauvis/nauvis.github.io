@@ -14,7 +14,7 @@ function getOnlineStatus(serverIP, subdomain, element) {
 			if (serverAPI.players.online > 0) {
 				var playerList = "";
 				for (let i = 0; i < serverAPI.players.online; i++) {
-					playerList = playerList + "- " + serverAPI.players.list[i]["name"] + "<br>";
+					playerList = playerList + serverAPI.players.list[i]["name"] + "<br>";
 				} 
 				element.innerHTML = element.innerHTML + playerList;
 			}
