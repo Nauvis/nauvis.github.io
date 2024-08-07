@@ -1,5 +1,5 @@
 # Usage Agreement
-- By inviting the Discord Bot Witch#7467 (Unique discord user ID 1170924742384037991. Hereby referred to as "bot") to a Discord Server ("server"), or by using its features, you agree to the below listed Terms of Service ("terms") and Privacy Policy ("policy").
+- By inviting the Discord Bot `Witch#7467` (ID `1170924742384037991`) Hereby referred to as ("bot") to a Discord Server ("server"), or by using its features, you agree to the below listed Terms of Service ("terms") and Privacy Policy ("policy").
 - You may invite the bot to a server you have sufficient permissions for and use its sets of features on any server you share with it. This priviledge can be revoked and the bot be removed from the server at any time, should you violate these terms and/or policy, the Terms of Service and/or Privacy Policy of Discord Inc., or their Community Guidelines.
 - Through inviting the bot, you agree to share data as described in the bot's [privacy policy](privacy.md). The intended use of this data is described in said policy.
 
